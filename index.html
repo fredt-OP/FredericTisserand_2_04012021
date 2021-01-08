@@ -19,48 +19,84 @@
             </nav>
          </header>  
          
-         <main>
-            
-                <p><strong>Trouvez votre hébergement pour des vacances de rêve</strong></p>
-                <p>En plein centre ville ou en pleine nature</p>
-            <!--Barre de recherche-->
-            <div>
-                
-            </div>
-            <!--Filtres-->
-            <div>
-                <h2>Filtres</h2>
-            </div>
+         <main class="main">
+            <section>   
+                    <p><strong>Trouvez votre hébergement pour des vacances de rêve</strong></p>
+                    <p>En plein centre ville ou en pleine nature</p>
+                <!--Barre de recherche-->
+                <div>
+                    <form class="searchForm" action="proceedFrom.html" method="GET">
+                        <span class="IconSearch">
+                            <i class="fas fa-map-marker-alt IconSearch"></i>
+                        </span>
+                            <input class="Searchinput" type="search" placeholder="Marseille, France" size="1">
+                        <button class="searchFormSubmitinput">
+                            <span class="searchFormSubmitinputText">Rechercher</span>
+                            <i class="searchFormSubmitinputIcon fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
 
-            <!--info-->
-            <div>
-                Plus de 500 logements sont disponibles dans cette ville
-            </div>
+                <!--Filtres-->
+                <div class="searchFilters">
+                    <h2 class="searchFiltersTitle">Filtres</h2>
+                    <div class="searchFiltersFilter">
+                        <div class="IconFilter">
+                            <i class="fas fa-money-bill-wave IconFilter"></i> 
+                        </div>
+                        <span class="searchFiltersFilterTitle">Économique</span>
+                    </div>
+                    <div class="searchFiltersFilter">
+                        <div class="IconFilter">
+                            <i class="fas fa-child"></i> 
+                        </div>
+                        <span class="searchFiltersFilterTitle">Familial</span>
+                    </div>
+                    <div class="searchFiltersFilter">
+                        <div class="IconFilter">
+                            <i class="fas fa-heart"></i> 
+                        </div>
+                        <span class="searchFiltersFilterTitle">Romantique</span>
+                    </div>
+                    <div class="searchFiltersFilter">
+                        <div class="IconFilter">
+                            <i class="fas fa-dog"></i> 
+                        </div>
+                        <span class="searchFiltersFilterTitle">Animaux autorisés</span>
+                    </div>
+                </div>
 
-        
+                <!--Résultat info recherches-->
+                <div class=searchResult>
+                    <div class="searchResultIcon">
+                        <i class="fas fa-info searchResultIcon"></i>
+                    </div>
+                    <P class="searchResultText">Plus de 500 logements sont disponibles dans cette ville</P>
+                </div>
+            </section>
 
         
             <!--Section "Hébergement"-->
             <section>
                 <div>
-                    <h1>
+                    <h2>
                     Hébergement à Marseille
-                    </h1>
+                    </h2>
                 </div>
         
             <!--Section "Les plus populaires"-->
                 <div>
-                    <h1>
+                    <h2>
                     Les plus populaires
-                    </h1>
+                    </h2>
                 </div>
 
             </section>
             <!--Section "Activités à Marseille"-->
             <section>
-                <h1>
+                <h2>
                 Activités à Marseille
-                </h1>
+                </h2>
 
             </section>
         </main>
