@@ -13,29 +13,28 @@
             <img class="headerImg" src="images/logo/Reservia.svg" alt="reservia"/>
             
             <!--Navigation-->
-            <nav class="headerNav">
-                <ul>
-                <li><a class="headerNavLink" href="#hosting" data-active="true">Hébergements</a></li>
-                <li><a class="headerNavLink" href="#activity" data-active="false">Activités</a></li>
-                <li><a class="headerNavLink" href="#signup" data-active="true">S'inscrire</a></li>
+            <nav class="headerNav" >
+                <ul class="headerNavList">
+                    <li><a class="headerNavLink" href="#hosting" data-active="true">Hébergements</a></li>
+                    <li><a class="headerNavLink" href="#activity" data-active="false">Activités</a></li>
+                    <li><a class="headerNavLink" href="#signup" data-active="true">S'inscrire</a></li>
                 </ul>
             </nav>
          </header>  
          
          <main class="main">
             <section class=search>   
-                    <p><strong>Trouvez votre hébergement pour des vacances de rêve</strong></p>
-                    <p>En plein centre ville ou en pleine nature</p>
+                <p><strong>Trouvez votre hébergement pour des vacances de rêve</strong></p>
+                <p>En plein centre ville ou en pleine nature</p>
                 <!--Barre de recherche-->
                 <div>
                     <form class="searchForm" action="proceedFrom.html" method="GET">
-                        <span class="IconSearch">
+                        <span class="iconSearch">
                             <i class="fas fa-map-marker-alt IconSearch"></i>
                         </span>
                             <input class="Searchinput" type="search" placeholder="Marseille, France" size="1">
                         <button class="searchFormSubmitinput">
-                            <span class="searchFormSubmitinputText">Rechercher</span>
-                            <i class="searchFormSubmitinputIcon fas fa-search"></i>
+                            <span class="searchFormSubmitinputText">Rechercher</span>   
                         </button>
                     </form>
                 </div>
@@ -45,7 +44,7 @@
                     <h2 class="searchFiltersTitle">Filtres</h2>
                     <div class="searchFiltersFilter">
                         <div class="IconFilter">
-                            <i class="fas fa-money-bill-wave IconFilter"></i> 
+                            <i class="fas fa-money-bill-wave"></i> 
                         </div>
                         <span class="searchFiltersFilterTitle">Économique</span>
                     </div>
@@ -80,8 +79,8 @@
 
         
             <!--Section "Hébergement"-->
-            <section class="hosting" id=hosting>
-                <div >
+            <section class="hostingAside" id=hosting>
+                <div class="hosting">
                     <h2 class="hostingTitle">Hébergement à Marseille</h2>
                     <a class="hostingCard" href="#">                       
                         <figure class="hostingCardFigure">

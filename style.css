@@ -1,91 +1,170 @@
 @font-face { /* Police Raleway */
     font-family: 'Raleway', Arial, serif; 
-    src: url('fonts/Raleway-Black.ttf ');
+    src: url('fonts/Raleway-Black.ttf');
     src: url('fonts/Raleway-Black.ttf') format('truetype'),
          
 }
 /* header */
 .header {
-    display: grid;
-    align-items: center;
-    max-width: 1440px;
-    margin: auto;
-  }
-  .headerImg {
-    grid-area: logo;
-    padding: 0 2em;
-    height: 2.813em;
-  }
-  .headerNav {
-    display: flex;
-    align-items: center;
-    grid-area: navbar;
-  }
-  .headerNavLink {
-    padding: 2em;
-    font-weight: 500;
-    text-align: center;
-    transition-duration: 0.1s;
-    border-top: 3px transparent solid;
-    border-bottom: 3px transparent solid;
-  }
-  .headerNavLink[data-active=true] {
-    color: #0065FC;
-  }
-  .headerNavLink:hover {
-    color: #0065FC;
-  }
-  .headerSignup {
-    display: flex;
-    align-items: center;
-    grid-area: button;
-    padding: 2em;
-    color: #0065FC;
-    font-weight: 600;
-  }
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerNavList {
+  max-width: 300px;
+  width: 300px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.headerNavLink {
+  padding: 1em;
+  font-weight: 500;
+  text-align: center;
+  transition-duration: 0.1s;
+  border-top: 3px  transparent solid;
+  border-bottom: 3px  transparent solid;
+  text-decoration: none;
   
-  @media screen and (min-width: 601px) {
-    .header {
-      grid-template-columns: auto 1fr auto auto;
-      grid-template-areas: "logo . navbar button";
-    }
-    .headerNavLink[data-active=true] {
-      border-top: 3px solid #0065FC;
-    }
-    .headerNavLink:hover {
-      border-top: 3px solid #0065FC;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .header {
-      grid-template-columns: auto 1fr auto;
-      grid-template-areas: "logo . button";
-    }
-    .headerimg {
-      order: 0;
-    }
-    .headerSignup {
-      order: 1;
-    }
-    .headerNav {
-      order: 2;
-    }
-    .headerNavLink {
-      border-top: none;
-      border-bottom: 3px solid #F2F2F2;
-      width: 50%;
-    }
-    .headerNavLink[data-active=true] {
-      border-bottom-color: #0065FC;
-    }
-    .headerNavLink:hover {
-      border-bottom-color: #0065FC;
-    }
-  }
-  .main {
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 2em;
-    box-sizing: border-box;
-  }
+}
+.headerNavLink[data-active=true] {
+  color: #0065FC;
+}
+.headerNavLink:hover {
+  color: #0065FC;
+}
+
+.main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.searchForm {
+  display: inline-flex;
+  max-width: 100%;
+  overflow: auto;
+}
+.searchForm {
+text-align: center;
+}
+.iconSearch {
+  background-color: #F2F2F2;
+padding: 1em 1.25em;
+border-radius: 1em 0 0 1em;
+margin-left: 0.1em;
+}
+.searchFormSearchinput {
+  border-right: none;
+  border-left: none;
+  border-top: #F2F2F2 1px solid;
+  border-bottom: #F2F2F2 1px solid;
+  padding: 0 1.5em;
+  box-sizing: border-box;
+  width: 200px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Raleway", "Sans serif";
+}
+.searchinput::placeholder {
+  font-family: "Raleway", "Sans serif";
+  font-size: 1em;
+  color: #00000069;
+}
+.searchFormSubmitinput {
+  background-color: #0065FC;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0 1.5rem;
+  font-family: "Raleway", "Sans serif";
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.searchFilters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  padding: 
+}
+.searchFiltersFilter {
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
+  border: 2px solid #d9d9d9;
+  border-radius: 2em;
+  cursor:pointer;
+  font-weight: bold;
+}
+.searchFiltersFilter: :last-child {
+  margin-right: 0;
+}
+.IconFilter {
+  color: blue;
+  background-color: #DEEBFF;
+  border-radius: 100%;
+  height: 3em;
+  width: 2em;
+  min-height: 3.5em;
+  min-width: 3.5em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchResult {
+  display: flex;
+  align-items: center;
   
+}
+.searchResultIcon {
+  color: #0065FC;
+  border : solid 1px #d9d9d9;
+  border-radius: 100%;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.hostingAside {
+  display: grid;
+  column-gap: 2em;
+  grid-template-columns: 6fr 3fr;
+}
+.hosting, .HostingMostPopular {
+  background-color: #F2F2F2;
+  border-radius: 1.5em;
+  padding: 2em;
+}
+.hosting {
+  display: grid;
+  column-gap: 2em;
+  row-gap: 2em;
+  
+}
+.hostingCard {
+  background-color: #F2F2F2;
+  padding: 0375em;
+  border-radius: 1.25em;
+  box-shadow: 0 0 16px #0000002e;
+  transition-duration: 0.1s;
+  cursor:pointer;
+  box-sizing: border-box;
+  height: 100%;
+}
+.hostingCard:hover {
+  transform: scale(1.02)
+}
+.hostingCardFigureImg {
+  height: 7rem;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
