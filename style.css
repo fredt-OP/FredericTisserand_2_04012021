@@ -144,7 +144,7 @@ body {
   column-gap: 2em;
   grid-template-columns: 6fr 3fr;
 }
-.hosting, .HostingMostPopular {
+.hosting, .hostingMostPopular {
   background-color: #F2F2F2;
   border-radius: 1.5em;
   padding: 2em;
@@ -161,7 +161,7 @@ body {
   margin: 0;
 }
 .hostingCard {
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
   padding: 0.375em;
   border-radius: 1.25em;
   box-shadow: 0 0 16px #0000002e;
@@ -169,8 +169,10 @@ body {
   cursor:pointer;
   box-sizing: border-box;
   height: 100%;
-  max-width: 12em;
+  max-width: 15em;
   max-height: 12em;
+  text-decoration: none;
+  margin: 0 0 2em 0;
 }
 .hostingCardFigure {
    margin: 0;
@@ -188,16 +190,17 @@ body {
 }
 .hostingCardTitle {
   color: black;
- margin: 0.25em 0.75em 0 0.75em;
+ font-size: 0.8em;
+ margin: 0.5em 0 0.5em 0;
 }
 .hostingCardDescript {
   color: black;
- margin: 0.25em 0.75em 0.25em 0.75em;
+ margin: 0 0 0.25em 0;
+ font-size: 0.8em;
 }
 .hostingCardStars {
-  color: blue;
-  margin: 0 0.75em 0.25em 0.75em
-
+  color: #0065FC;
+  margin: 0 -0.3em 0 0;
 }
 .hostingViewmore {
   color: black;
@@ -211,8 +214,13 @@ body {
  align-items: start;
  grid-template-rows: auto repeat(3, 1fr);
 }
+.headerMostPopular {
+  display:flex;
+  justify-content: space-between;
+  margin: 0;
+}
 .hostingCardMostPopular {
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
   padding: 0.375em;
   border-radius: 1.25em;
   box-shadow: 0 0 16px #0000002e;
@@ -224,10 +232,8 @@ body {
 .hostingCardMostPopularFigure:hover {
   transform: scale(1.02)
 }
-
 .hostingCardMostPopularFigure {
   display: flex;
-  flex-direction: column;
   position:relative;
   min-height: 100%;
   width: 33%;
@@ -243,19 +249,24 @@ body {
   width: 100%;
   max-height: 100%;
   border-radius: 1em 0 0 1em;
-  position:absolute
+  position:absolute;
 }
 .hostingCardMostPopularTitle {
 color: black;
 display: flex;
 justify-content: space-between;
+font-size: 0.8em;
+margin: 0.5em 0 0.5em 0;
 }
 
 .hostingCardMostPopularDescript {
 color: black;
+margin: 0 0 0.25em 0;
+ font-size: 0.8em;
 }
 .hostingCardMostPopularStars {
-color: blue;
+color: #0065FC;
+margin: 0 -0.3em 0 0;
 }
 /*activités*/
 .Activity{
