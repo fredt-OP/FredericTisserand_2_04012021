@@ -1,39 +1,46 @@
 @font-face { /* Police Raleway */
     font-family: 'Raleway', Arial, serif; 
-    src: url('fonts/Raleway-Black.ttf');
-    src: url('fonts/Raleway-Black.ttf') format('truetype'),
+    src: url('fonts/Raleway-Regular.ttf');
+    src: url('fonts/Raleway-Regular.ttf') format('truetype'),
          
+}
+body {
+  font-family: 'Raleway', Arial, serif; 
 }
 /* header */
 .header {
   display: flex;
   justify-content: space-between;
+  max-width: 1440px;
+  max-height: auto;
 }
-
+.headerImg {
+  margin-left: 2em;
+}
 .headerNavList {
   max-width: 300px;
   width: 300px;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 .headerNavLink {
   padding: 1em;
   font-weight: 500;
   text-align: center;
   transition-duration: 0.1s;
-  border-top: 3px  transparent solid;
-  border-bottom: 3px  transparent solid;
-  text-decoration: none;
-  
+  border-top: 3px  transparent, solid;
+  border-bottom: 3px  transparent, solid;
+  text-decoration: none;  
 }
 .headerNavLink[data-active=true] {
   color: #0065FC;
 }
 .headerNavLink:hover {
   color: #0065FC;
+  border-top: 3px  solid;
 }
-
+/*main*/
 .main {
   max-width: 1440px;
   margin: auto;
@@ -46,15 +53,22 @@
   overflow: auto;
 }
 .searchForm {
-text-align: center;
+  text-align: center;
 }
 .iconSearch {
   background-color: #F2F2F2;
-padding: 1em 1.25em;
-border-radius: 1em 0 0 1em;
-margin-left: 0.1em;
+  padding: 1em 1.25em;
+  border-radius: 1em 0 0 1em;
+  margin-left: 0.1em;
 }
-.searchFormSearchinput {
+.searchinput {
+  width: 60em;
+}
+.searchinput::placeholder {
+  font-size: 1em;
+  color: #00000069;
+}
+.Searchinput {
   border-right: none;
   border-left: none;
   border-top: #F2F2F2 1px solid;
@@ -66,28 +80,25 @@ margin-left: 0.1em;
   font-weight: bold;
   font-family: "Raleway", "Sans serif";
 }
-.searchinput::placeholder {
-  font-family: "Raleway", "Sans serif";
-  font-size: 1em;
-  color: #00000069;
-}
 .searchFormSubmitinput {
   background-color: #0065FC;
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 0 1rem 1rem 0;
-  padding: 0 1.5rem;
+  border-radius: 0 1em 1em 0;
+  padding: 0 1.5em;
   font-family: "Raleway", "Sans serif";
-  font-size: 1rem;
+  font-size: 1em;
   cursor: pointer;
 }
-
+/*Filtres*/
 .searchFilters {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2em;
-  padding: 
+}
+.searchFiltersTitle {
+  margin: 0.5em 2em 0 0;
 }
 .searchFiltersFilter {
   display: flex;
@@ -97,40 +108,37 @@ margin-left: 0.1em;
   border-radius: 2em;
   cursor:pointer;
   font-weight: bold;
+  padding: 0 1em 0 0em;
+  height: 3em ;
 }
-.searchFiltersFilter: :last-child {
+.searchFiltersFilter:last-child {
   margin-right: 0;
 }
 .IconFilter {
   color: blue;
   background-color: #DEEBFF;
   border-radius: 100%;
-  height: 3em;
-  width: 2em;
-  min-height: 3.5em;
-  min-width: 3.5em;
+  height: 2em;
+  width: 1em;
+  min-height: 3em;
+  min-width: 3em;
   display:flex;
   align-items: center;
   justify-content: center;
+  margin: 0 0.5em 0 0;
 }
 .searchResult {
   display: flex;
   align-items: center;
-  
+  margin-top: 1.5em;
 }
 .searchResultIcon {
   color: #0065FC;
   border : solid 1px #d9d9d9;
   border-radius: 100%;
-  margin-right: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-
-
+  margin: 0.3em 0.6em 0.3em 0.6em;
+  }
+  /*hébergements*/
 .hostingAside {
   display: grid;
   column-gap: 2em;
@@ -141,15 +149,71 @@ margin-left: 0.1em;
   border-radius: 1.5em;
   padding: 2em;
 }
-.hosting {
-  display: grid;
-  column-gap: 2em;
-  row-gap: 2em;
+.hostingRef {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.hostingHeader {
   
+}
+.hostingheadertitle {
+  margin: 0;
 }
 .hostingCard {
   background-color: #F2F2F2;
-  padding: 0375em;
+  padding: 0.375em;
+  border-radius: 1.25em;
+  box-shadow: 0 0 16px #0000002e;
+  transition-duration: 0.1s;
+  cursor:pointer;
+  box-sizing: border-box;
+  height: 100%;
+  max-width: 12em;
+  max-height: 12em;
+}
+.hostingCardFigure {
+   margin: 0;
+}
+.hostingCard:hover {
+  transform: scale(1.02)
+}
+.hostingCardFigureImg {
+  height: 7em;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 1em 1em 0 0;
+}
+.hostingCardTitle {
+  color: black;
+ margin: 0.25em 0.75em 0 0.75em;
+}
+.hostingCardDescript {
+  color: black;
+ margin: 0.25em 0.75em 0.25em 0.75em;
+}
+.hostingCardStars {
+  color: blue;
+  margin: 0 0.75em 0.25em 0.75em
+
+}
+.hostingViewmore {
+  color: black;
+  font-weight: bold;
+}
+
+/*Les plus populaires*/
+.hostingMostPopular {
+ display: grid;
+ row-gap: 2em;
+ align-items: start;
+ grid-template-rows: auto repeat(3, 1fr);
+}
+.hostingCardMostPopular {
+  background-color: #F2F2F2;
+  padding: 0.375em;
   border-radius: 1.25em;
   box-shadow: 0 0 16px #0000002e;
   transition-duration: 0.1s;
@@ -157,14 +221,94 @@ margin-left: 0.1em;
   box-sizing: border-box;
   height: 100%;
 }
-.hostingCard:hover {
+.hostingCardMostPopularFigure:hover {
   transform: scale(1.02)
 }
-.hostingCardFigureImg {
-  height: 7rem;
+
+.hostingCardMostPopularFigure {
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  min-height: 100%;
+  width: 33%;
+  min-width: 33%;
+  max-width: 33%;
+  margin: 0;
+  overflow: auto;
+}
+.hostingCardMostPopularFigureImg {
+  height: 7em;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   max-height: 100%;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1em 0 0 1em;
+  position:absolute
+}
+.hostingCardMostPopularTitle {
+color: black;
+display: flex;
+justify-content: space-between;
+}
+
+.hostingCardMostPopularDescript {
+color: black;
+}
+.hostingCardMostPopularStars {
+color: blue;
+}
+/*activités*/
+.Activity{
+ display: flex;
+
+ 
+}
+h3 {
+  grid-column: 1/-1;
+}
+.ActivityCard {
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
+}
+.ActivityCardFigure {
+  position:relative;
+  flex:1;
+}
+.ActivityCardFigureImg {
+  border-radius: 1em 1em 0 0;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.footer {
+  background-color: #F2F2F2;
+  width: 100%;
+  display: flex;
+  margin: 1em;
+  max-width: 1440px;
+  max-height: auto;
+}
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 1440px;
+  margin: auto;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+.footerColumnTitle {
+  margin: 0.5;
+}
+.footerColumnlink {
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 0 0 0;
+  margin: 0;
 }
