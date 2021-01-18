@@ -154,9 +154,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.hostingHeader {
-  
-}
 .hostingheadertitle {
   margin: 0;
 }
@@ -189,12 +186,12 @@ body {
   border-radius: 1em 1em 0 0;
 }
 .hostingCardTitle {
-  color: black;
+ color: black;
  font-size: 0.8em;
  margin: 0.5em 0 0.5em 0;
 }
 .hostingCardDescript {
-  color: black;
+ color: black;
  margin: 0 0 0.25em 0;
  font-size: 0.8em;
 }
@@ -209,10 +206,10 @@ body {
 
 /*Les plus populaires*/
 .hostingMostPopular {
- display: grid;
- row-gap: 2em;
- align-items: start;
- grid-template-rows: auto repeat(3, 1fr);
+  display: grid;
+  row-gap: 2em;
+  align-items: start;
+  grid-template-rows: auto repeat(3, 1fr);
 }
 .headerMostPopular {
   display:flex;
@@ -233,68 +230,77 @@ body {
   transform: scale(1.02)
 }
 .hostingCardMostPopularFigure {
-  display: flex;
   position:relative;
   min-height: 100%;
-  width: 33%;
-  min-width: 33%;
-  max-width: 33%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   margin: 0;
   overflow: auto;
+}
+.hostingCardMostPopularFigureFigcaption {
+  display: flex;
+  flex-direction: column;
+  
 }
 .hostingCardMostPopularFigureImg {
   height: 7em;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  max-width: 33%;
+  width: 33%;
   max-height: 100%;
   border-radius: 1em 0 0 1em;
   position:absolute;
 }
 .hostingCardMostPopularTitle {
-color: black;
-display: flex;
-justify-content: space-between;
-font-size: 0.8em;
-margin: 0.5em 0 0.5em 0;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin: 0.5em 0 0.5em 0;
 }
 
 .hostingCardMostPopularDescript {
-color: black;
-margin: 0 0 0.25em 0;
- font-size: 0.8em;
+  color: black;
+  margin: 0 0 0.25em 0;
+  font-size: 0.8em;
 }
 .hostingCardMostPopularStars {
-color: #0065FC;
-margin: 0 -0.3em 0 0;
+  color: #0065FC;
+  margin: 0 -0.3em 0 0;
 }
 /*activités*/
 .Activity{
  display: flex;
-
  
 }
-h3 {
-  grid-column: 1/-1;
-}
 .ActivityCard {
+   display:flex;
+   flex-direction: column;
+   text-decoration: none;
+   
+}
+.ActivityCardFigure {
+  border: 2px solid #0065FC;
+  display:flex;
+  flex-direction: column;
+  position:relative;
   box-shadow: 0 0 20px #0000002e;
   border-radius: 1em;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition-duration: 0.1s;
-}
-.ActivityCardFigure {
-  position:relative;
-  flex:1;
+  margin: 1em;
 }
 .ActivityCardFigureImg {
   border-radius: 1em 1em 0 0;
-  position:absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+h3 {
+  margin: 0 0 0 1em;
+  color: black;
 }
 .footer {
   background-color: #F2F2F2;
@@ -307,7 +313,7 @@ h3 {
 .footerColumn {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   max-width: 100%;
   width: 1440px;
   margin: auto;
@@ -321,5 +327,4 @@ h3 {
   color: black;
   text-decoration: none;
   padding: 0.5em 0 0 0;
-  margin: 0;
 }
