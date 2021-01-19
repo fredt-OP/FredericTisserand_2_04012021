@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
-  max-height: auto;
+  margin: 0 auto;
 }
 .headerImg {
   margin-left: 2em;
@@ -206,15 +206,9 @@ body {
 
 /*Les plus populaires*/
 .hostingMostPopular {
-  display: grid;
-  row-gap: 2em;
-  align-items: start;
-  grid-template-rows: auto repeat(3, 1fr);
-}
-.headerMostPopular {
   display:flex;
-  justify-content: space-between;
-  margin: 0;
+  flex-direction: column;
+ 
 }
 .hostingCardMostPopular {
   background-color: #FFFFFF;
@@ -224,24 +218,21 @@ body {
   transition-duration: 0.1s;
   cursor:pointer;
   box-sizing: border-box;
-  height: 100%;
+  text-decoration: none;
+  margin: 0 0 2em 0;
+  
 }
 .hostingCardMostPopularFigure:hover {
   transform: scale(1.02)
 }
 .hostingCardMostPopularFigure {
-  position:relative;
+  display:flex;
   min-height: 100%;
   width: 100%;
   min-width: 100%;
-  max-width: 100%;
+  max-width: 100%; 
   margin: 0;
   overflow: auto;
-}
-.hostingCardMostPopularFigureFigcaption {
-  display: flex;
-  flex-direction: column;
-  
 }
 .hostingCardMostPopularFigureImg {
   height: 7em;
@@ -250,47 +241,38 @@ body {
   width: 33%;
   max-height: 100%;
   border-radius: 1em 0 0 1em;
-  position:absolute;
 }
 .hostingCardMostPopularTitle {
   color: black;
   display: flex;
-  justify-content: space-between;
   font-size: 0.8em;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.5em 0 0.5em 1em;
 }
-
 .hostingCardMostPopularDescript {
   color: black;
-  margin: 0 0 0.25em 0;
+  margin: 0 0 3.25em 1em;
   font-size: 0.8em;
 }
 .hostingCardMostPopularStars {
   color: #0065FC;
-  margin: 0 -0.3em 0 0;
+  margin: 0 -0.3em 0 0.4em;
+  
 }
 /*activités*/
 .Activity{
- display: flex;
- 
+  background-color: aqua;
+  
 }
-.ActivityCard {
-   display:flex;
-   flex-direction: column;
-   text-decoration: none;
-   
+.ActivityCard{
+  text-decoration: none; 
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 .ActivityCardFigure {
   border: 2px solid #0065FC;
-  display:flex;
-  flex-direction: column;
-  position:relative;
   box-shadow: 0 0 20px #0000002e;
-  border-radius: 1em;
-  display: flex;
-  flex-direction: column;
+  border-radius: 1em 1em 0 0;
   transition-duration: 0.1s;
-  margin: 1em;
 }
 .ActivityCardFigureImg {
   border-radius: 1em 1em 0 0;
@@ -298,30 +280,29 @@ body {
   width: 100%;
   object-fit: cover;
 }
-h3 {
+.ActivityCardFigureFigcaption {
   margin: 0 0 0 1em;
   color: black;
 }
+/*footer*/
 .footer {
   background-color: #F2F2F2;
   width: 100%;
   display: flex;
-  margin: 1em;
+  margin: 0 auto;
   max-width: 1440px;
   max-height: auto;
 }
 .footerColumn {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  max-width: 100%;
-  width: 1440px;
-  margin: auto;
+  margin: 0 auto;
+  margin-left: 0;
   padding: 0 2em;
   box-sizing: border-box;
 }
 .footerColumnTitle {
-  margin: 0.5;
+  margin: 2em 0 1em 0;
 }
 .footerColumnlink {
   color: black;
