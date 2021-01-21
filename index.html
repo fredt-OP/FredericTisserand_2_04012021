@@ -15,9 +15,9 @@
             <!--Navigation-->
             <nav class="headerNav" >
                 <ul class="headerNavList">
-                    <li><a class="headerNavLink" href="#hosting" data-active="true">Hébergements</a></li>
+                    <li><a class="headerNavLink" href="#hosting" data-active="false">Hébergements</a></li>
                     <li><a class="headerNavLink" href="#activity" data-active="false">Activités</a></li>
-                    <li><a class="headerNavLink" href="#signup" data-active="true">S'inscrire</a></li>
+                    <li><a class="headerNavLink2" href="#signup" data-active="true"><strong>S'inscrire</strong></a></li>
                 </ul>
             </nav>
          </header>  
@@ -71,7 +71,7 @@
                 <!--Résultat info recherches-->
                 <div class=searchResult>
                     <div class="searchResultIcon">
-                        <i class="fas fa-info searchResultIcon"></i>
+                        <i class="fas fa-info"></i>
                     </div>
                     <P class="searchResultText">Plus de 500 logements sont disponibles dans cette ville</P>
                 </div>
@@ -188,7 +188,7 @@
                 <aside class="hostingMostPopular">
                     <div class="headerMostPopular">
                     <h2 class="HostingMostPopularTitle">Les plus populaires</h2>
-                    <i class="fas fa-chart-line fa-lg"></i>
+                    <i class="fas fa-chart-line fa-lg iconMostPopular"></i>
                     </div>
                     <a class="hostingCardMostPopular" href="#">
                         <figure class="hostingCardMostPopularFigure">
@@ -249,7 +249,7 @@
                 <div class="Activity">
                     <a class="ActivityCard" href="#">
                         <figure class="ActivityCardFigure">
-                            <img class="ActivityCardFigureImg" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port.">
+                            <img class="ActivityCardFigureImg1" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port.">
                             <figcaption class="ActivityCardFigureFigcaption">
                                 <h3><strong>Vieux Port</strong></h3>
                             </figcaption>
@@ -257,35 +257,35 @@
                     </a>
                     <a class="ActivityCard" href="#">
                         <figure class="ActivityCardFigure">
-                            <img class="ActivityCardFigureImg" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues.">
+                            <img class="ActivityCardFigureImg2" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues.">
                             <figcaption class="ActivityCardFigureFigcaption">
-                            <h3><strong>Fort de Pomègues</strong></h3>
+                                <h3><strong>Fort de Pomègues</strong></h3>
                             </figcaption>
                         </figure>
                         <figure class="ActivityCardFigure">
-                            <img class="ActivityCardFigureImg" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Iles du Frioul.">
+                            <img class="ActivityCardFigureImg3" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Iles du Frioul.">
                             <figcaption class="ActivityCardFigureFigcaption">
-                                <h3><strong>Iles du Frioul</strong></h3>
-                            </figcaption>
-                        </figure>
-                    </a>
-                    <a class="ActivityCard" href="#">
-                        <figure class="ActivityCardFigure">
-                            <img class="ActivityCardFigureImg" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques.">
-                            <figcaption class="ActivityCardFigureFigcaption">
-                                <h3><strong>Parc National des Calanques</strong></h3>
+                                <h3><strong>Îles du Frioul</strong></h3>
                             </figcaption>
                         </figure>
                     </a>
                     <a class="ActivityCard" href="#">
                         <figure class="ActivityCardFigure">
-                            <img class="ActivityCardFigureImg" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde.">
+                            <img class="ActivityCardFigureImg4" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques.">
+                            <figcaption class="ActivityCardFigureFigcaption">    
+                                <h3 class="ActivityCardFigureFigcaption"><strong>Parc National des Calanques</strong></h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="ActivityCard" href="#">
+                        <figure class="ActivityCardFigure">
+                            <img class="ActivityCardFigureImg5" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde.">
                             <figcaption class="ActivityCardFigureFigcaption">
                                 <h3><strong>Notre-Dame-de-la-Garde</strong></h3>
                             </figcaption>
                         </figure>
                         <figure class="ActivityCardFigure">
-                            <img class="ActivityCardFigureImg" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp.">
+                            <img class="ActivityCardFigureImg6" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp.">
                             <figcaption class="ActivityCardFigureFigcaption">
                                 <h3><strong>Parc Longchamp</strong></h3>
                             </figcaption>
@@ -300,21 +300,27 @@
             <!--1st column-->
             <div class="footerColumn">
                 <h3 class="footerColumnTitle">A propos</h3>
-                    <a href="#" class="footerColumnlink">Fonctionnement du site</a>
-                    <a Conditions href="#" class="footerColumnlink">Conditions générales de vente</a>
-                    <a href="#" class="footerColumnlink">Données et confidentialité</a>
+                <ul class="footerList">
+                    <li href="#" class="footerColumnlink">Fonctionnement du site</li>
+                    <li Conditions href="#" class="footerColumnlink">Conditions générales de vente</li>
+                <li href="#" class="footerColumnlink">Données et confidentialité</li>
+                </ul>
             </div>
             <!--2nd column-->
             <div class="footerColumn">
                 <h3 class="footerColumnTitle">Nos hébergements</h3>
-                    <a href="#" class="footerColumnlink">Charte qualité</a>
-                    <a href="#" class="footerColumnlink">Soumettre votre hôtel</a>
+                <ul class="footerList">   
+                    <li href="#" class="footerColumnlink">Charte qualité</li>
+                    <li href="#" class="footerColumnlink">Soumettre votre hôtel</li>
+                </ul>
             </div>
             <!--3th column-->
             <div class=footerColumn>
                 <h3 class="footerColumnTitle">Assistance</h3>
-                    <a href="#" class="footerColumnlink">Centre d'aide</a>
-                    <a href="#" class="footerColumnlink">Nous contacter</a>
+                <ul class="footerList">
+                    <li href="#" class="footerColumnlink">Centre d'aide</li>
+                    <li href="#" class="footerColumnlink">Nous contacter</li>
+                </ul>
             </div>
 
         </footer>
