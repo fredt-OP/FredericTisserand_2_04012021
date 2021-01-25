@@ -11,7 +11,6 @@
 body {
   font-family: 'Raleway', Arial, serif; 
 }
-
 /* header */
 .header {
   display: flex;
@@ -49,6 +48,24 @@ body {
 .headerNavLink:hover {
   color: #0065FC;
   border-top: 3px  solid;
+}
+@media screen and (max-width: 1024px) {
+  
+  
+}
+@media screen and (max-width: 600px) {
+  
+  .headerNavLink {
+    border-top: none;
+    border-bottom: 3px solid #F2F2F2;
+    width: 50%;
+  }
+  .headerNavLink[data-active=true] {
+    border-bottom-color: #0065FC;
+  }
+  .headerNavLink:hover {
+    border-bottom-color: #0065FC;
+  }
 }
 /*main*/
 .main {
@@ -149,6 +166,17 @@ body {
   margin-right: 0.7em;
   padding: 0.2em 0.6em 0.2em 0.6em;
 }
+@media screen and (max-width: 1024px) {
+  
+  
+}
+@media screen and (max-width: 600px) {
+  .searchFilters {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
   /*hébergements*/
 .hostingAside {
   display: grid;
@@ -164,7 +192,7 @@ body {
 .hostingRef {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .hostingheadertitle {
   margin: 0 auto;
@@ -178,8 +206,10 @@ body {
   cursor:pointer;
   box-sizing: border-box;
   height: 100%;
-  max-width: 15em;
-  max-height: 12em;
+  width: 15em;
+  
+  max-width: auto;
+  max-height: auto;
   text-decoration: none;
   margin: 0 0 2em 0;
 }
@@ -200,21 +230,36 @@ body {
 .hostingCardTitle {
   color: black;
   font-size: 0.8em;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.5em 0 0.5em 0.5em;
 }
 .hostingCardDescript {
   color: black;
-  margin: 0 0 0.25em 0;
+  margin: 0 0 0.25em 0.5em;
   font-size: 0.8em;
 }
 .hostingCardStars {
   color: #0065FC;
-  margin: 0 -0.3em 0 0;
+  margin: 0 -0.3em 0 0.2em;
 }
 .hostingViewmore {
   color: black;
   font-weight: bold;
   text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  
+  
+}
+@media screen and (max-width: 600px) {
+  .hostingAside {
+    display:flex;
+    flex-direction: column-reverse;
+  }
+  .hostingRef {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
 }
 /*Les plus populaires*/
 .hostingMostPopular {
@@ -271,6 +316,13 @@ body {
   color: #0065FC;
   margin: 0 -0.3em 0 1em;
 }
+@media screen and (max-width: 1024px) {
+  
+  
+}
+@media screen and (max-width: 600px) {
+  
+}
 /*activités*/
 .sectionActivity{
   max-width: 1640px;
@@ -280,8 +332,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow:hidden;
   max-width: 2640px;
-  height: 520px;
-  max-height: 530px;
+  
 }
 .ActivityCard{
   text-decoration: none; 
@@ -342,6 +393,17 @@ body {
   margin: 0 0 0 1em;
   color: black;
 }
+@media screen and (max-width: 1024px) {
+  
+  
+}
+@media screen and (max-width: 600px) {
+  .Activity {
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
 /*footer*/
 .footer {
   background-color: #F2F2F2;
@@ -371,4 +433,15 @@ body {
 }
 .footerList {
   padding: 0
+}
+@media screen and (max-width: 1024px) {
+  
+  
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    
+  }
 }
