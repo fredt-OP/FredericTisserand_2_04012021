@@ -20,8 +20,8 @@
 }
 #bloc_page
 {
-    max-width: 1440px;
-    margin: auto;
+  max-width: 1440px;
+  margin: auto;
 }
 body {
   font-family: 'Raleway', Arial, serif; 
@@ -33,6 +33,7 @@ body {
   max-width: 1350px;
   margin: 0 auto;
 }
+/*Le logo*/
 .headerImg {
   margin-left: 2em;
 }
@@ -44,13 +45,14 @@ body {
   justify-content: space-between;
   margin-right: 80px;
 }
+/*Les liens de navigation*/
 .headerNavLink {
   padding: 1em;
   font-weight: 500;
   text-align: center;
   transition-duration: 0.1s;
-  border-top: 3px  transparent, solid;
-  border-bottom: 3px  transparent, solid;
+  border-top: 3px  transparent;
+  border-bottom: 3px  transparent;
   text-decoration: none;  
   color: black;
   font-family: 'Raleway-regular';
@@ -67,14 +69,11 @@ body {
   color: #0065FC;
   border-top: 3px  solid;
 }
-@media screen and (max-width: 1024px) {
-  
-  
-}
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .header {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
   .headerNavList {
     margin: 0 6.1em 0 -3em;
@@ -111,6 +110,7 @@ body {
   padding: 0 2rem;
   box-sizing: border-box;
 }
+/*Barre de recherche*/
 .search h1 {
   font-weight: bold;
   margin-bottom: -0.2em;
@@ -167,10 +167,7 @@ body {
 .searchFiltersFilter:hover {
   transform: scale(1.02)
 }
-@media screen and (max-width: 1024px) {
-  
-  
-}
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .searchFormSubmitinputText {
     display: none
@@ -186,7 +183,6 @@ body {
     border-radius: 1em 1em 1em 1em;
     padding: 0 1em 0 1em;
   }
-
 }
 /*Filtres*/
 .searchFilters {
@@ -203,7 +199,6 @@ body {
   font-weight: bold;
   padding: 1.2em 0 0 0;
   font-family: 'Raleway-regular';
-
 }
 .searchFiltersFilter {
   display: flex;
@@ -245,10 +240,7 @@ body {
   margin-right: 0.7em;
   padding: 0.2em 0.6em 0.2em 0.6em;
 }
-@media screen and (max-width: 1024px) {
-  
-  
-}
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .searchFilters {
     display: flex;
@@ -268,6 +260,8 @@ body {
   display: grid;
   column-gap: 2em;
   grid-template-columns: 6fr 3fr;
+  width: 1250px;
+  margin-top: 1em;
 }
 .hosting, .hostingMostPopular {
   font-family: 'Raleway-regular';
@@ -280,9 +274,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+/*Le titre*/
 .hostingheadertitle {
   margin: 0 auto;
 }
+/*Les cartes*/
 .hostingCard {
   background-color: #FFFFFF;
   padding: 0.375em;
@@ -293,8 +289,6 @@ body {
   box-sizing: border-box;
   height: 100%;
   width: 14em;
-  max-width: auto;
-  max-height: auto;
   text-decoration: none;
   margin-bottom: 2em;
 }
@@ -335,12 +329,25 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-@media screen and (max-width: 1150px) {
+/*Adaptation responsive tablette*/
+@media screen and (max-width: 1200px) {
   .hostingAside {
-    display:flex;
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column;
+  }
+  .hosting {
+    background-color: #FFFFFF;
+    width: 700px;
+    margin: 0 0em 2em 0em;
+  }
+  .hostingRef {
+    display: grid;
+    grid-template-columns: 25% 25%;
+    row-gap: 1em;
+    margin-bottom: 2em;
   }
 }
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .hostingAside {
     display:flex;
@@ -355,7 +362,6 @@ body {
     display: flex;
     flex-direction: column;
     width: auto;
-    
   }
   .hostingCard {
     width: 340px;
@@ -370,6 +376,7 @@ body {
   float: right;
   margin-top: -2em;
 }
+/*Les cartes les plus populaire*/
 .hostingCardMostPopular {
   background-color: #FFFFFF;
   border-radius: 1.25em;
@@ -391,8 +398,7 @@ body {
   width: 23em;
   font-size: 15px;
   margin: 0;
-  overflow: auto;
-  
+  overflow: auto; 
 }
 .hostingCardMostPopularFigureImg {
   height: 7em;
@@ -402,6 +408,7 @@ body {
   max-height: 100%;
   border-radius: 1em 0 0 1em;
 }
+/*Le titre*/
 .hostingCardMostPopularTitle {
   color: black;
   display: flex;
@@ -421,34 +428,39 @@ body {
   color: #F2F2F2;
   margin: 0 -0.3em 0 0em;
 }
-@media screen and (max-width: 1150px) {
-
-  
-  
+/*Adaptation responsive tablette*/
+@media screen and (max-width: 1200px){
+  .hostingMostPopular {
+    width: 750px;
+  }
 }
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .hostingMostPopular {
-  width: 350px;
-  border-radius: none;
-  margin: 0 -10em 1em -3.5em;
+    width: 350px;
+    margin: 0 -10em 1em -3.5em;
   }
   .hostingCardMostPopular{
-  margin-right: 0.3em;
+    margin-right: 0.3em;
   }
 }
 /*activités*/
 .sectionActivity{
   font-family: 'Raleway-regular';
   font-weight: 500;
-  max-width: 1640px;
+  max-width: 1440px;
 }
 .Activity {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow:hidden;
-  max-width: 2640px;
-  
+  max-width: 1440px;
 }
+.ActivityTitle{
+  margin-top: 2em;
+  margin-bottom: 0.3em;
+}
+/*Les cartes activités à Marseille*/
 .ActivityCard {
   text-decoration: none; 
   display: flex;
@@ -456,7 +468,7 @@ body {
   justify-content: space-between;
   height: 480px;
   width: 330px;
-  margin: 0 0em 0 -2em;
+  margin: 0 1.4em 0 -2em;
 }
 .ActivityCardFigure:hover {
   transform: scale(1.01);
@@ -511,14 +523,14 @@ body {
   font-weight: bold;
   font-family:'Raleway-Medium';
 }
-
+/*Adaptation responsive tablette*/
 @media screen and (min-width: 601px) {
   .Activity {
     display: flex;
     flex-wrap: wrap;
-    
   }
 }
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .Activity {
     display: flex;
@@ -527,7 +539,7 @@ body {
     height: 1050px
   }
   .ActivityCardFigure {
-   max-height: 150px;
+    max-height: 150px;
   }
   .ActivityCardFigureFigcaption {
     margin: -1em 0 1em 0 ;
@@ -557,9 +569,8 @@ body {
   background-color: #F2F2F2;
   display: flex;
   margin: 0 auto;
-  max-width: auto;
-  max-height: auto;
-  width:1330px;
+  margin-top: 1em;
+  width:1350px;
 }
 .footerColumn {
   display: flex;
@@ -582,6 +593,7 @@ body {
 .footerList {
   padding: 0
 }
+/*Adaptation responsive tablette*/
 @media screen and (max-width: 1150px) {
   .footer {
     width: 900px;
@@ -590,10 +602,10 @@ body {
     margin: 0;
   }
 }
+/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
   .footer {
     display: flex;
     flex-direction: column;
-    
   }
 }
