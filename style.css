@@ -1,17 +1,31 @@
 @font-face { /* Police Raleway */
     font-family: 'Raleway';
     src: url('fonts/Raleway-Regular.ttf') format('truetype');
-    src: url('fonts/Raleway-Regular.ttf') format('truetype');  
+    src: url('fonts/Raleway-Black.ttf') format('truetype');
+    src: url('fonts/Raleway-BlackItalic.ttf') format('truetype');
+    src: url('fonts/Raleway-Bold.ttf') format('truetype');  
+    src: url('fonts/Raleway-BoldItalic.ttf') format('truetype');
+    src: url('fonts/Raleway-ExtraBold.ttf') format('truetype');
+    src: url('fonts/Raleway-ExtraBoldItalic.ttf') format('truetype');
+    src: url('fonts/Raleway-ExtraLight.ttf') format('truetype');
+    src: url('fonts/Raleway-Italic.ttf') format('truetype');
+    src: url('fonts/Raleway-Light.ttf') format('truetype');
+    src: url('fonts/Raleway-LightItalic.ttf') format('truetype');
+    src: url('fonts/Raleway-Medium.ttf') format('truetype');
+    src: url('fonts/Raleway-MediumItalic.ttf') format('truetype');
+    src: url('fonts/Raleway-SemiBold.ttf') format('truetype');
+    src: url('fonts/Raleway-SemiBoldItalic.ttf') format('truetype');
+    src: url('fonts/Raleway-Thin.ttf') format('truetype');
+    src: url('fonts/Raleway-ThinItalic.ttf') format('truetype');
 }
 #bloc_page
 {
-    max-width: 1440px;
-    margin: auto;
+  max-width: 1440px;
+  margin: auto;
 }
 body {
   font-family: 'Raleway', Arial, serif; 
 }
-
 /* header */
 .header {
   display: flex;
@@ -19,6 +33,7 @@ body {
   max-width: 1350px;
   margin: 0 auto;
 }
+/*Le logo*/
 .headerImg {
   margin-left: 2em;
 }
@@ -30,25 +45,63 @@ body {
   justify-content: space-between;
   margin-right: 80px;
 }
+/*Les liens de navigation*/
 .headerNavLink {
   padding: 1em;
   font-weight: 500;
   text-align: center;
   transition-duration: 0.1s;
-  border-top: 3px  transparent, solid;
-  border-bottom: 3px  transparent, solid;
+  border-top: 3px  transparent;
+  border-bottom: 3px  transparent;
   text-decoration: none;  
   color: black;
+  font-family: 'Raleway-regular';
 }
 .headerNavLink[data-active=true] {
   color: #0065FC;
 }
 .headerNavLink2 {
-  font-weight: bold;
+  color: #0065FC;
+  text-decoration: none;
+  font-family: 'Raleway-regular';
 }
 .headerNavLink:hover {
   color: #0065FC;
   border-top: 3px  solid;
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .headerNavList {
+    margin: 0 6.1em 0 -3em;
+    border-bottom: 3px solid #F2F2F2;
+  }
+  .headerNavLink { 
+    width: 165px;
+    display: block;
+    position: relative;
+    margin: 0 0 0 -1em;
+  }
+  .headerNavLink[data-active=true] {
+    border-bottom-color: #0065FC;
+  }
+  .headerNavLink:hover {
+    border-top: none;
+    border-bottom: 3px solid;
+  }
+  .headerImg {
+    width: 100px;
+    margin: 0;
+  }
+  .headerNavLink2 {
+    position: absolute;
+    top: 25px;
+    right: 2em;
+    text-decoration: none;
+  }
 }
 /*main*/
 .main {
@@ -56,6 +109,15 @@ body {
   margin: auto;
   padding: 0 2rem;
   box-sizing: border-box;
+}
+/*Barre de recherche*/
+.search h1 {
+  font-weight: bold;
+  margin-bottom: -0.2em;
+  font-family: 'Raleway-regular';
+}
+.search p  {
+  font-family: 'Raleway-Medium' ;
 }
 .searchForm {
   display: inline-flex;
@@ -71,13 +133,15 @@ body {
   border-radius: 1em 0 0 1em;
   margin-left: 0.1em;
 }
-.searchinput {
-  width: 60em;
+.searchMini {
+  display: none;
 }
-.searchinput::placeholder {
-  font-size: 1em; 
+.searchInput::placeholder {
+  font-size: 1em;
+  color: #000000;
+  font-weight: bold;
 }
-.Searchinput {
+.searchInput {
   border-right: none;
   border-left: none;
   border-top: #F2F2F2 1px solid;
@@ -96,18 +160,45 @@ body {
   border: none;
   border-radius: 0 1em 1em 0;
   padding: 0 1.5em;
-  font-family: "Raleway", "Sans serif";
+  font-family: "Raleway-regular", "Sans serif";
   font-size: 1em;
   cursor: pointer;
 }
+.searchFiltersFilter:hover {
+  transform: scale(1.02)
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .searchFormSubmitinputText {
+    display: none
+  }
+  .searchMini {
+    display:block;
+  }
+  .search {
+    width: 350px;
+    margin: 0 0 0 -1em;
+  }
+  .searchFormSubmitinput {
+    border-radius: 1em 1em 1em 1em;
+    padding: 0 1em 0 1em;
+  }
+}
 /*Filtres*/
 .searchFilters {
+  display:flex;
+}
+.searchFiltersA {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2em;
+  font-family: 'Raleway-regular';
 }
 .searchFiltersTitle {
   margin: 0.5em 2em 0 0;
+  font-weight: bold;
+  padding: 1.2em 0 0 0;
+  font-family: 'Raleway-regular';
 }
 .searchFiltersFilter {
   display: flex;
@@ -119,7 +210,7 @@ body {
   cursor:pointer;
   font-weight: bold;
   padding: 0 1em 0 0em;
-  height: 3em ;
+  height: 3em;
 }
 .searchFiltersFilter:last-child {
   margin-right: 0;
@@ -149,14 +240,31 @@ body {
   margin-right: 0.7em;
   padding: 0.2em 0.6em 0.2em 0.6em;
 }
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .searchFilters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  }
+  .searchFiltersFilter {
+    margin-top: 1em;
+    padding: 0 0.6em 0 0;
+  }
+  .searchFiltersTitle {
+    margin-bottom: -1.5em;
+  }
+}
   /*hébergements*/
 .hostingAside {
   display: grid;
   column-gap: 2em;
   grid-template-columns: 6fr 3fr;
-  max-width: 1260px;
+  width: 1250px;
+  margin-top: 1em;
 }
 .hosting, .hostingMostPopular {
+  font-family: 'Raleway-regular';
   background-color: #F2F2F2;
   border-radius: 1.5em;
   padding: 2em;
@@ -164,11 +272,13 @@ body {
 .hostingRef {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+/*Le titre*/
 .hostingheadertitle {
   margin: 0 auto;
 }
+/*Les cartes*/
 .hostingCard {
   background-color: #FFFFFF;
   padding: 0.375em;
@@ -178,10 +288,9 @@ body {
   cursor:pointer;
   box-sizing: border-box;
   height: 100%;
-  max-width: 15em;
-  max-height: 12em;
+  width: 14em;
   text-decoration: none;
-  margin: 0 0 2em 0;
+  margin-bottom: 2em;
 }
 .hostingCardFigure {
    margin: 0;
@@ -200,21 +309,63 @@ body {
 .hostingCardTitle {
   color: black;
   font-size: 0.8em;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.5em 0 0.5em 0.5em;
 }
 .hostingCardDescript {
   color: black;
-  margin: 0 0 0.25em 0;
+  margin: 0 0 0.25em 0.5em;
   font-size: 0.8em;
 }
 .hostingCardStars {
   color: #0065FC;
-  margin: 0 -0.3em 0 0;
+  margin: 0 -0.3em 0 0.2em;
+}
+.hostingCardStarsFalse {
+  color:#F2F2F2;
+  margin: 0 -0.3em 0 0.2em;
 }
 .hostingViewmore {
   color: black;
   font-weight: bold;
   text-decoration: none;
+}
+/*Adaptation responsive tablette*/
+@media screen and (max-width: 1200px) {
+  .hostingAside {
+    display: flex;
+    flex-direction: column;
+  }
+  .hosting {
+    background-color: #FFFFFF;
+    width: 700px;
+    margin: 0 0em 2em 0em;
+  }
+  .hostingRef {
+    display: grid;
+    grid-template-columns: 25% 25%;
+    row-gap: 1em;
+    margin-bottom: 2em;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .hostingAside {
+    display:flex;
+    flex-direction: column-reverse;
+  }
+  .hosting {
+    background-color: #FFFFFF;
+    width: 350px;
+    margin: 0 -10em 1em -3.5em;
+  }
+  .hostingRef {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .hostingCard {
+    width: 340px;
+  }
 }
 /*Les plus populaires*/
 .hostingMostPopular {
@@ -225,6 +376,7 @@ body {
   float: right;
   margin-top: -2em;
 }
+/*Les cartes les plus populaire*/
 .hostingCardMostPopular {
   background-color: #FFFFFF;
   border-radius: 1.25em;
@@ -235,6 +387,7 @@ body {
   text-decoration: none;
   margin: 0 0 2em 0;
   padding: 0.4em 0 0.4em 0.4em;
+  width: 100%;
 }
 .hostingCardMostPopularFigure:hover {
   transform: scale(1.02)
@@ -242,11 +395,10 @@ body {
 .hostingCardMostPopularFigure {
   display:flex;
   min-height: 100%;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%; 
+  width: 23em;
+  font-size: 15px;
   margin: 0;
-  overflow: auto;
+  overflow: auto; 
 }
 .hostingCardMostPopularFigureImg {
   height: 7em;
@@ -256,6 +408,7 @@ body {
   max-height: 100%;
   border-radius: 1em 0 0 1em;
 }
+/*Le titre*/
 .hostingCardMostPopularTitle {
   color: black;
   display: flex;
@@ -271,32 +424,57 @@ body {
   color: #0065FC;
   margin: 0 -0.3em 0 1em;
 }
+.hostingCardMostPopularStarsFalse {
+  color: #F2F2F2;
+  margin: 0 -0.3em 0 0em;
+}
+/*Adaptation responsive tablette*/
+@media screen and (max-width: 1200px){
+  .hostingMostPopular {
+    width: 750px;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .hostingMostPopular {
+    width: 350px;
+    margin: 0 -10em 1em -3.5em;
+  }
+  .hostingCardMostPopular{
+    margin-right: 0.3em;
+  }
+}
 /*activités*/
 .sectionActivity{
-  max-width: 1640px;
+  font-family: 'Raleway-regular';
+  font-weight: 500;
+  max-width: 1440px;
 }
 .Activity {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow:hidden;
-  max-width: 2640px;
-  height: 520px;
-  max-height: 530px;
+  max-width: 1440px;
 }
-.ActivityCard{
+.ActivityTitle{
+  margin-top: 2em;
+  margin-bottom: 0.3em;
+}
+/*Les cartes activités à Marseille*/
+.ActivityCard {
   text-decoration: none; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   height: 480px;
   width: 330px;
-  margin: 0 0em 0 -2em;
+  margin: 0 1.4em 0 -2em;
 }
 .ActivityCardFigure:hover {
   transform: scale(1.01);
 }
 .ActivityCardFigure {
-  box-shadow: 0 0 20px #0000002e;
+  box-shadow: 0 0px 16px #0000002e;
   border-radius: 1em 1em 1em 1em;
   transition-duration: 0.1s;
   flex: 1;
@@ -338,18 +516,61 @@ body {
   width: 280px;
   object-fit: cover;
 }
-.ActivityCardFigureFigcaption {
-  margin: 0 0 0 1em;
+.ActivityCardFigureFigcaption h3 {
+  margin: 2em 0 0 1em;
   color: black;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family:'Raleway-Medium';
+}
+/*Adaptation responsive tablette*/
+@media screen and (min-width: 601px) {
+  .Activity {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .Activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1050px
+  }
+  .ActivityCardFigure {
+    max-height: 150px;
+  }
+  .ActivityCardFigureFigcaption {
+    margin: -1em 0 1em 0 ;
+  }
+  .ActivityCardFigureImg1 {
+    max-height: 110px;
+  }
+  .ActivityCardFigureImg2 {
+    max-height: 100px;
+  }
+  .ActivityCardFigureImg3 {
+    max-height: 100px;
+  }
+  .ActivityCardFigureImg4 {
+    max-height: 100px;
+  }
+  .ActivityCardFigureImg5 {
+    max-height: 100px;
+  }
+  .ActivityCardFigureImg6 {
+    max-height: 100px;
+  }
 }
 /*footer*/
 .footer {
+  font-family: 'Raleway-regular';
   background-color: #F2F2F2;
   display: flex;
   margin: 0 auto;
-  max-width: 1440px;
-  max-height: auto;
-  width:1330px;
+  margin-top: 1em;
+  width:1350px;
 }
 .footerColumn {
   display: flex;
@@ -371,4 +592,20 @@ body {
 }
 .footerList {
   padding: 0
+}
+/*Adaptation responsive tablette*/
+@media screen and (max-width: 1150px) {
+  .footer {
+    width: 900px;
+    display:flex;
+    align-items:flex-start;
+    margin: 0;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
