@@ -165,7 +165,8 @@ body {
   cursor: pointer;
 }
 .searchFiltersFilter:hover {
-  transform: scale(1.02)
+  transform: scale(1.02);
+  background-color: #DEEBFF;
 }
 /* Adaptation responsive petit écrans*/
 @media screen and (max-width: 600px) {
@@ -267,7 +268,7 @@ body {
   font-family: 'Raleway-regular';
   background-color: #F2F2F2;
   border-radius: 1.5em;
-  padding: 2em;
+  padding: 1em;
 }
 .hostingRef {
   display: flex;
@@ -275,8 +276,8 @@ body {
   justify-content: space-around;
 }
 /*Le titre*/
-.hostingheadertitle {
-  margin: 0 auto;
+.hostingheaderTitle {
+  margin-left: 1em;
 }
 /*Les cartes*/
 .hostingCard {
@@ -328,6 +329,7 @@ body {
   color: black;
   font-weight: bold;
   text-decoration: none;
+  margin-left: 1.5em;
 }
 /*Adaptation responsive tablette*/
 @media screen and (max-width: 1200px) {
@@ -374,7 +376,8 @@ body {
 }
 .iconMostPopular {
   float: right;
-  margin-top: -2em;
+  margin-top: -1.9em;
+  margin-right: 0.6em;
 }
 /*Les cartes les plus populaire*/
 .hostingCardMostPopular {
@@ -385,26 +388,29 @@ body {
   cursor:pointer;
   box-sizing: border-box;
   text-decoration: none;
-  margin: 0 0 2em 0;
+  margin: 0 0 2em 1em;
   padding: 0.4em 0 0.4em 0.4em;
-  width: 100%;
+  width: 20em;
+}
+.HostingMostPopularTitle{
+  margin: 1em 0 0.7em 1em;
 }
 .hostingCardMostPopularFigure:hover {
   transform: scale(1.02)
 }
 .hostingCardMostPopularFigure {
   display:flex;
-  min-height: 100%;
-  width: 23em;
-  font-size: 15px;
-  margin: 0;
-  overflow: auto; 
+  height: 7em;
+  width: 14em;
+  font-size: 18px;
+  margin: 0 1em 0 0;
+  word-wrap: break-word;
 }
 .hostingCardMostPopularFigureImg {
-  height: 7em;
+  height: 8em;
   object-fit: cover;
   max-width: 40%;
-  width: 40%;
+  width: 45%;
   max-height: 100%;
   border-radius: 1em 0 0 1em;
 }
