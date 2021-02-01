@@ -449,6 +449,11 @@ body {
   .hostingCardMostPopular{
     margin-right: 0.3em;
   }
+  .iconMostPopular {
+    float: right;
+    margin-top: -1.9em;
+    margin-right: 1em;
+  }
 }
 /*activités*/
 .sectionActivity{
