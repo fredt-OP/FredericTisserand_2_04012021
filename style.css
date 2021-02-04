@@ -1,6 +1,6 @@
 @font-face { /* Police Raleway */
-    font-family: 'Raleway';
-    src: url('fonts/Raleway-Regular.ttf') format('truetype');
+  font-family: 'Raleway';
+  src: url('fonts/Raleway-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Raleway';
@@ -11,12 +11,12 @@
   src: url('fonts/Raleway-Medium.ttf') format('truetype');
 }
 
+
 #bloc_page
 {
   max-width: 1350px;
   margin: auto;
 }
-
 
 body {
   font-family: 'Raleway', Arial, serif; 
@@ -35,7 +35,6 @@ body {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  
 }
 /*Les liens de navigation*/
 .headerNavLink {
@@ -46,8 +45,6 @@ body {
   border-bottom: 3px  transparent;
   text-decoration: none;  
   color: black;
-  
-  
 }
 .headerNavLink[data-active=true] {
   color: #0065FC;
@@ -55,16 +52,13 @@ body {
 .headerNavLink2 {
   color: #0065FC;
   text-decoration: none;
-  
-  
-  
 }
 .headerNavLink:hover {
   color: #0065FC;
   border-top: 3px  solid;
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -74,10 +68,10 @@ body {
     border-bottom: 3px solid #F2F2F2;
   }
   .headerNavLink { 
-    width: 165px;
+    min-width: 165px;
     display: block;
     position: relative;
-    margin: 0 0 0 -1em;
+    margin: 0 0 -0.2em -1em;
   }
   .headerNavLink[data-active=true] {
     border-bottom-color: #0065FC;
@@ -88,12 +82,12 @@ body {
   }
   .headerImg {
     width: 100px;
-
+    margin-left: 0.5em;
   }
   .headerNavLink2 {
     position: absolute;
     top: 25px;
-    right: 2em;
+    right: 1.3em;
     text-decoration: none;
   }
 }
@@ -104,9 +98,12 @@ body {
 }
 /*Barre de recherche*/
 .search h1 {
-  font-size: 23px ;
+  font-size: 24px ;
   font-weight: bold;
   margin-bottom: -0.2em;
+}
+.search p {
+  font-weight: 100;
 }
 .searchForm {
   display: inline-flex;
@@ -157,7 +154,7 @@ body {
   background-color: #DEEBFF;
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
   .searchFormSubmitinputText {
     display: none
   }
@@ -165,8 +162,11 @@ body {
     display:block;
   }
   .search {
-    width: 350px;
-    margin: 0 0 0 -1em;
+    width: 100%;
+    margin-left: 0.5em;
+  }
+  .search p {
+    font-size: 16px;
   }
   .searchFormSubmitinput {
     border-radius: 1em 1em 1em 1em;
@@ -229,18 +229,26 @@ body {
   padding: 0.2em 0.6em 0.2em 0.6em;
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
   .searchFilters {
+    
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1em;
+    margin-top: -1em
   }
   .searchFiltersFilter {
     margin-top: 1em;
-    padding: 0 0.6em 0 0;
+    margin-right: 1em;
+    padding-right: 0.6em;
   }
   .searchFiltersTitle {
     margin-bottom: -1.5em;
+  }
+  .searchResultText {
+    margin-right: 0.1em;
+  }
+  .searchResultIcon {
+    margin-top: -1.5em
   }
 }
   /*hébergements*/
@@ -270,7 +278,7 @@ body {
   background-color: #FFFFFF;
   padding: 0.375em;
   border-radius: 1.25em;
-  box-shadow: 10px 10px 10px -10px #0000002e;
+  box-shadow: 0px 2px 8px 0px #00000020;
   transition-duration: 0.1s;
   cursor:pointer;
   box-sizing: border-box;
@@ -280,7 +288,7 @@ body {
   margin-bottom: 2em;
 }
 .hostingCardFigure {
-   margin: 0;
+  margin: 0;
 }
 .hostingCard:hover {
   transform: scale(1.02)
@@ -322,11 +330,12 @@ body {
   .hostingAside {
     display: flex;
     flex-direction: column;
+    width:  100%;
   }
   .hosting {
     background-color: #FFFFFF;
-    width: 700px;
-    margin: 0 0em 2em 0em;
+    width:  100%;
+    margin: 0 0 2em 0;
   }
   .hostingRef {
     display: grid;
@@ -336,15 +345,21 @@ body {
   }
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
   .hostingAside {
     display:flex;
     flex-direction: column-reverse;
+    width:100%;
+    margin-left: -1em;
+    
   }
   .hosting {
     background-color: #FFFFFF;
-    width: 350px;
-    margin: 0 -10em 1em -3.5em;
+    width:  100%;;
+    margin: 0 0 1em 0;
+  }
+  .hostingheaderTitle {
+    margin: 0.3em
   }
   .hostingRef {
     display: flex;
@@ -352,13 +367,18 @@ body {
     width: auto;
   }
   .hostingCard {
-    width: 340px;
+    width:  21em;
+    margin-bottom: 0;
+    margin-left:0.6em;
+  }
+  .hostingViewmore {
+    margin-left: 0.6em
   }
 }
 /*Les plus populaires*/
 .hostingMostPopular {
   display:flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 .iconMostPopular {
   float: right;
@@ -423,22 +443,26 @@ body {
 /*Adaptation responsive tablette*/
 @media screen and (max-width: 1200px){
   .hostingMostPopular {
-    width: 750px;
+    width: 100%;
   }
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
   .hostingMostPopular {
-    width: 350px;
-    margin: 0 -10em 1em -3.5em;
+    width: 100%;
+    border-radius: 0;
   }
   .hostingCardMostPopular{
-    margin-right: 0.3em;
+   margin: 0.6em;
+   width: 21em;
+  }
+  .HostingMostPopularTitle {
+    margin: 0.4em;
   }
   .iconMostPopular {
     float: right;
-    margin-top: -1.9em;
-    margin-right: 0.5em;
+    margin-top: -1.5em;
+    margin-right: 0.7em;
   }
 }
 /*activités*/
@@ -451,10 +475,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
-  
-
-  
   width: 100%;
 }
 .ActivityTitle{
@@ -469,10 +489,7 @@ body {
   justify-content: space-between;
   height: 440px;
   width: 300px;
-  
   margin-bottom: 1em;
-  
-  
 }
 .ActivityCardFigure:hover {
   transform: scale(1.01);
@@ -481,7 +498,6 @@ body {
   box-shadow: 10px 10px 10px -10px #0000002e;
   border-radius: 1em 1em 1em 1em;
   transition-duration: 0.1s;
-  
   background-color:#FFFFFF;
   margin: 0 0 2.5em 0;
 }
@@ -535,93 +551,93 @@ body {
   }
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
-  .Activity {
+@media screen and (max-width: 375px) {
+  .ActivityTitle {
+    margin-left: 0.4em;
+  }
+  .ActivityCard {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 1050px
+    height:100%;
+    width: 23.7em;
+    margin-bottom: 0;
   }
   .ActivityCardFigure {
-    max-height: 150px;
-  }
-  .ActivityCardFigureFigcaption {
-    margin: -1em 0 1em 0 ;
+    height: 180px;
+    margin: 0.6em;
   }
   .ActivityCardFigureImg1 {
-    max-height: 110px;
+    height: 125px;
+    width: 100%;
   }
   .ActivityCardFigureImg2 {
-    max-height: 100px;
+    height: 125px;
+    width: 100%;
   }
   .ActivityCardFigureImg3 {
-    max-height: 100px;
+    height: 125px;
+    width: 100%;
   }
   .ActivityCardFigureImg4 {
-    max-height: 100px;
+    height: 125px;
+    width: 100%;
   }
   .ActivityCardFigureImg5 {
-    max-height: 100px;
+    height: 125px;
+    width: 100%;
   }
   .ActivityCardFigureImg6 {
-    max-height: 100px;
+    height: 125px;
+    width: 100%;
   }
 }
 /*footer*/
 .footerFooter {
   max-width: 1450px;
-  
   background-color: #F2F2F2;
   display: flex;
-  
   margin: 0 auto;
   width: 100%;
-  
-  
-  
-  
 }
 .footerColumn {
   display: flex;
   flex-direction: column;
   margin: 50px;
   width: 100%;
-  
 }
 .footerColumnTitle {
-  margin-top: 0em;
+  margin-top: -1em;
+  margin-bottom: 0em;
   font-size: 1em;
   font-weight: bold;
 }
 .footerColumnlink {
   color: black;
-  list-style-type: none;
   text-decoration: none;
-  padding: 0.5em 0 0 0;
   font-size: 0.8em;
+  cursor:pointer;
 }
 .footerList {
-  padding: 0
+  padding: 0;
+  list-style-type: none;
+}
+.footerListList {
+  padding-bottom: 0.6em;
 }
 /*Adaptation responsive tablette*/
-@media screen and (max-width: 1363px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 1150px) {
-  .footer {
-    width: 900px;
-    display:flex;
-    align-items:flex-start;
-    margin: 0;
-  }
-}
+
+
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 600px) {
-  .footer {
+@media screen and (max-width: 375px) {
+  .footerFooter {
     display: flex;
     flex-direction: column;
+    width: 375px;
+    margin: 1.5em -0.5em 0 -0.5em;
+  }
+  .footerColumn {
+    height: 100%;
+    margin: 3em 0 0 1em;
   }
 }
