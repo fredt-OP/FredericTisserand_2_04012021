@@ -470,6 +470,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 2em;
   }
   .hostingCardMostPopular {
     width: 16em;
@@ -564,6 +565,7 @@ body {
   .hostingMostPopular {
     width: 100%;
     border-radius: 0;
+    margin-bottom: 0;
   }
   .hostingCardMostPopular{
    margin: 0.6em;
@@ -660,15 +662,90 @@ body {
   font-weight: bold;
 }
 /*Adaptation responsive tablette*/
-@media screen and (max-width: 1235px) {
+@media screen and (max-width: 1245px) {
   .Activity {
     display: flex;
     flex-direction: column;
     max-height: 1300px;
   }
+  .ActivityTitle {
+    margin-left: 22em;
+    margin-top: 1em;
+  }
+  .ActivityCard {
+    margin-left: 8em;
+  }
 }
-/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 1100px) {
+  .ActivityTitle {
+    margin-left: 19em;
+    margin-top: 1em;
+  }
+  .ActivityCard {
+    margin-left: 5em;
+  }
+}
+@media screen and (max-width: 870px) {
+  .ActivityTitle {
+    margin-left: 15em;
+    margin-top: 1em;
+  }
+  .ActivityCard {
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 670px) {
+  .ActivityTitle {
+    margin-left: 9em;
+    margin-top: 1em;
+  }
+  .ActivityCard {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 610px) {
+  .ActivityTitle {
+    margin-left: 7em;
+    margin-top: 1em;
+  }
+  .ActivityCard {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width: 23.7em;
+    margin-bottom: 0;
+    margin-left: 7em;
+  }
+  .ActivityCardFigure {
+    height: 180px;
+    margin: 0.6em;
+  }
+  .ActivityCardFigureImg1 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg2 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg3 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg4 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg5 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg6 {
+    height: 125px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px)  {
   .ActivityTitle {
     margin-left: 0.6em;
     margin-top: 1em;
@@ -676,7 +753,49 @@ body {
   .ActivityCard {
     display: flex;
     flex-direction: column;
-    
+    height:100%;
+    width: 23.7em;
+    margin-bottom: 0;
+    margin-left: 2em;
+  }
+  .ActivityCardFigure {
+    height: 180px;
+    margin: 0.6em;
+  }
+  .ActivityCardFigureImg1 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg2 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg3 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg4 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg5 {
+    height: 125px;
+    width: 100%;
+  }
+  .ActivityCardFigureImg6 {
+    height: 125px;
+    width: 100%;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 390px) {
+  .ActivityTitle {
+    margin-left: 0.6em;
+    margin-top: 1em;
+  }
+  .ActivityCard {
+    display: flex;
+    flex-direction: column;
     height:100%;
     width: 23.7em;
     margin-bottom: 0;
@@ -722,7 +841,7 @@ body {
 .footerColumn {
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin: 50px 0 0 50px;
   width: 100%;
 }
 .footerColumnTitle {
@@ -745,11 +864,11 @@ body {
   padding-bottom: 0.6em;
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   .footerFooter {
     display: flex;
     flex-direction: column;
-    width: 375px;
+    width: 100%;
     margin: 2em -0.5em 0 -0.5em;
     padding-top: 2em;
   }
