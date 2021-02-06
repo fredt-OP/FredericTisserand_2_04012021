@@ -10,11 +10,13 @@
   font-family: 'Raleway';
   src: url('fonts/Raleway-Medium.ttf') format('truetype');
 }
+
 #bloc_page
 {
   max-width: 1350px;
   margin: auto;
 }
+
 body {
   font-family: 'Raleway', Arial, serif; 
 }
@@ -393,6 +395,7 @@ body {
   .hostingViewmore {
     margin-right: 15.1em;
     margin-left: 0;
+  }
 }
 /*Les plus populaires*/
 .hostingMostPopular {
