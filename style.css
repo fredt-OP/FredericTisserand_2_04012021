@@ -19,32 +19,32 @@ body {
 }
 /*Le logo*/
 .headerNavList {
-  max-width: 400px;
-  width: 100%;
-  list-style: none;
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  width: 100%;
+  max-width: 400px;
   margin-right: 0.5em;
+  padding: 0;
   font-weight: 600;
+  list-style: none;
 }
 /*Les liens de navigation*/
 .headerNavLink {
-  padding: 1em 1.5em 1em 1em;
-  text-align: center;
-  transition-duration: 0.1s;
   border-top: 3px  transparent;
   border-bottom: 3px  transparent;
+  padding: 1em 1.5em 1em 1em;
   text-decoration: none;  
+  text-align: center;
   color: black;
+  transition-duration: 0.1s;
 }
 .headerNavLink[data-active=true] {
   color: #0065FC;
 }
 .headerNavLink2 {
+  padding-left: 1.5em;
   color: #0065FC;
   text-decoration: none;
-  padding-left: 1.5em;
 }
 .headerNavLink:hover {
   color: #0065FC;
@@ -61,8 +61,8 @@ body {
   }
   .headerNavList {
     width: 100%;
-    padding-bottom: 1em;
     margin-right: 0;
+    padding-bottom: 1em;
     border-bottom: 3px solid #F2F2F2;
   }
   .headerNavLink { 
@@ -123,9 +123,9 @@ body {
 }
 /*Barre de recherche*/
 .search h1 {
+  margin-bottom: -0.2em;
   font-size: 24px ;
   font-weight: 800;
-  margin-bottom: -0.2em;
 }
 .search p {
   font-weight: 100;
@@ -139,40 +139,40 @@ body {
   text-align: center;
 }
 .iconSearch {
-  background-color: #F2F2F2;
+  margin-left: 0.1em;
   padding: 1em 1.25em;
   border-radius: 1em 0 0 1em;
-  margin-left: 0.1em;
+  background-color: #F2F2F2;
 }
 .searchMini {
   display: none;
 }
 .searchInput::placeholder {
   font-size: 1em;
-  color: #000000;
   font-weight: bold;
+  color: #000000;
 }
 .searchInput {
-  border-right: none;
-  border-left: none;
-  border-top: #F2F2F2 1px solid;
-  border-bottom: #F2F2F2 1px solid;
-  padding: 0 1.5em;
   box-sizing: border-box;
   width: 235px;
+  border-top: #F2F2F2 1px solid;
+  border-right: none;
+  border-bottom: #F2F2F2 1px solid;
+  border-left: none;
+  padding: 0 1.5em;
   font-size: 1em;
   font-weight: bold;
   color: black;
 }
 .searchFormSubmitinput {
-  background-color: #0065FC;
-  color: white;
-  font-weight: bold;
   border: none;
   border-radius: 0 1em 1em 0;
   padding: 0 1.5em;
   font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
+  color: white;
+  background-color: #0065FC;
 }
 .searchFiltersFilter:hover {
   transform: scale(1.02);
@@ -199,12 +199,12 @@ body {
     font-weight: 700;
   }
   .search p {
-    font-size: 16px;
     margin-left: 1.2em;
+    font-size: 16px;
   }
   .searchForm {
-    margin-left: 1.2em;
     width: 350px;
+    margin-left: 1.2em;
   }
   .searchFormSubmitinput {
     border-radius: 1em 1em 1em 1em;
@@ -228,31 +228,31 @@ body {
 .searchFiltersFilter {
   display: flex;
   align-items: center;
-  margin-right: 1.8em;
   border: 2px solid #d9d9d9;
   border-left: none;
   border-radius: 2em;
-  cursor:pointer;
+  height: 3em;
+  margin-right: 1.8em;
+  padding: 0 1em 0 0em;
   font-size: 1em;
   font-weight: 800;
-  padding: 0 1em 0 0em;
-  height: 3em;
+  cursor:pointer;
 }
 .searchFiltersFilter:last-child {
   margin-right: 0;
 }
 .IconFilter {
-  color: blue;
-  background-color: #DEEBFF;
-  border-radius: 100%;
-  height: 2em;
-  width: 1em;
-  min-height: 3.25em;
-  min-width: 3em;
   display:flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 1em;
+  min-width: 3em;
+  height: 2em;
+  min-height: 3.25em;
+  border-radius: 100%;
   margin: 0 0.5em 0 0;
+  background-color: #DEEBFF;
+  color: blue;
 }
 .searchResult {
   display: flex;
@@ -260,11 +260,11 @@ body {
   margin-top: 1.5em;
 }
 .searchResultIcon {
-  color: #0065FC;
   border : solid 1px #d9d9d9;
   border-radius: 100%;
   margin-right: 0.7em;
   padding: 0.2em 0.6em 0.2em 0.6em;
+  color: #0065FC;
 }
 /* Adaptation responsive Tablette*/
 @media screen and (max-width: 900px)  {
@@ -288,7 +288,7 @@ body {
     margin-bottom: -1em;
   }
   .searchResult {
-    margin-top: 0em;
+    margin-top: 0;
   }
   .searchResultText {
     margin: 1em 0 1em 0;
@@ -306,9 +306,9 @@ body {
   margin-top: 1em;
 }
 .hosting, .hostingMostPopular {
-  background-color: #F2F2F2;
   border-radius: 1.5em;
   padding: 1em;
+  background-color: #F2F2F2;
 }
 .hostingRef {
   display: flex;
@@ -322,17 +322,17 @@ body {
 }
 /*Les cartes*/
 .hostingCard {
-  background-color: #FFFFFF;
-  padding: 0.375em;
+  width: 15em;
+  height: 100%;
+  box-sizing: border-box;
   border-radius: 1.25em;
   box-shadow: 0px 2px 8px 0px #00000020;
-  transition-duration: 0.1s;
-  cursor:pointer;
-  box-sizing: border-box;
-  height: 100%;
-  width: 15em;
-  text-decoration: none;
   margin-bottom: 2em;
+  padding: 0.375em;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  cursor:pointer;
+  transition-duration: 0.1s;
 }
 .hostingRef {
   margin-bottom: 1em;
@@ -344,37 +344,37 @@ body {
   transform: scale(1.02);
 }
 .hostingCardFigureImg {
-  height: 7em;
-  object-fit: cover;
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
+  height: 7em;
   max-height: 100%;
   border-radius: 1em 1em 0 0;
+  object-fit: cover;
 }
 .hostingCardTitle {
-  color: black;
-  font-size: 0.8em;
   margin: 0.5em 0 0.5em 0.5em;
+  font-size: 0.8em;
   font-weight: 800;
+  color: black;
 }
 .hostingCardDescript {
-  color: black;
   margin: 0 0 0.25em 0.5em;
   font-size: 0.7em;
+  color: black;
 }
 .hostingCardStars {
-  color: #0065FC;
   margin: 0 -0.3em 0 0.2em;
+  color: #0065FC;
 }
 .hostingCardStarsFalse {
-  color:#F2F2F2;
   margin: 0 -0.3em 0 0.2em;
+  color:#F2F2F2;
 }
 .hostingViewmore {
-  color: black;
-  font-weight: 800;
-  text-decoration: none;
   margin-left: 1.5em;
+  text-decoration: none;
+  font-weight: 800;
+  color: black;
 }
 /*Adaptation responsive tablette*/
 @media screen and (max-width: 600px) {
@@ -384,9 +384,9 @@ body {
     width: 100%;
   }
   .hosting {
-    background-color: #FFFFFF;
     width:  100%;
     margin: 0 0 2em 0;
+    background-color: #FFFFFF;
   }
   .hostingRef {
     display: grid;
@@ -427,8 +427,8 @@ body {
     flex-direction: column;
   }
   .hostingCard {
-    height: 12em;
     width: 23em;
+    height: 12em;
   }
 }
 /* Adaptation responsive petit écrans*/
@@ -440,13 +440,13 @@ body {
     margin: 0 auto;
   }
   .hosting {
-    background-color: #FFFFFF;
     width: 341px;
-    margin-bottom: 1em;
     margin-top: -2em;
+    margin-bottom: 1em;
+    background-color: #FFFFFF;
   }
   .hostingheaderTitle {
-    margin: 0.8em 0 0.8em -1.6em;
+    margin: 0.8em 0 0.8em -1.2em;
   }
   .hostingRef {
     display: flex;
@@ -457,7 +457,7 @@ body {
     margin-bottom: 1em;
   }
   .hostingViewmore {
-    margin-right: 15.1em;
+    margin-right: 15em;
     margin-left: 0;
   }
 }
@@ -473,16 +473,16 @@ body {
 }
 /*Les cartes les plus populaire*/
 .hostingCardMostPopular {
-  background-color: #FFFFFF;
+  width: 22em;
+  box-sizing: border-box;
   border-radius: 1.25em;
   box-shadow: 10px 10px 10px -10px #0000002e;
-  transition-duration: 0.1s;
   cursor:pointer;
-  box-sizing: border-box;
-  text-decoration: none;
   margin: 0 0 2em 1.6em;
   padding: 0.4em 0 0.4em 0.4em;
-  width: 22em;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  transition-duration: 0.1s;
 }
 .HostingMostPopularTitle{
   margin: 0.8em 0 0.9em 1em;
@@ -496,49 +496,49 @@ body {
 }
 .hostingCardMostPopularFigure {
   display:flex;
-  height: 7em;
   width: 14em;
-  font-size: 18px;
+  height: 7em;
   margin: 0 1em 0 0;
+  font-size: 18px;
   word-wrap: break-word;
 }
 .hostingCardMostPopularFigureImg {
-  height: 8em;
-  object-fit: cover;
-  max-width: 40%;
   width: 45%;
+  max-width: 40%;
+  height: 8em;
   max-height: 100%;
   border-radius: 1em 0 0 1em;
+  object-fit: cover;
 }
 /*Le titre*/
 .hostingCardMostPopularTitle {
-  color: black;
   display: flex;
+  margin: 0.5em 0 0.5em 1em;
   font-size: 0.8em;
   font-weight: 800;
-  margin: 0.5em 0 0.5em 1em;
+  color: black;
 }
 .hostingCardMostPopularDescript {
-  color: black;
   margin: 0 0 2.25em 1.2em;
   font-size: 0.7em;
+  color: black;
 }
 .hostingCardMostPopularStars {
-  color: #0065FC;
   margin: 2em -0.3em 0 1em;
+  color: #0065FC;
 }
 .hostingCardMostPopularStarsFalse {
-  color: #F2F2F2;
   margin: 0 -0.3em 0 0em;
+  color: #F2F2F2;
 }
 /*Adaptation responsive tablette*/
 @media screen and (max-width: 1235px){
   .hostingMostPopular {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
     margin-bottom: 2em;
   }
   .hostingCardMostPopular {
@@ -554,34 +554,33 @@ body {
     margin-left: 0.5em;
   }
   .headerMostPopular {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
     margin-left: -8em;
   }
 }
 @media screen and (max-width: 1000px) {
   .headerMostPopular {
-    margin-left: 3em;
     margin-left: -7.5em;
   }
 }
 @media screen and (max-width: 890px){
   .hostingMostPopular {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
   }
   .hostingCardMostPopular {
     width: 35em;
     margin-left: 2em;
   }
    .headerMostPopular {
-    margin-left: -6.5em;
-    display:flex;
-    justify-content: center
+     display:flex;
+     justify-content: center;
+     margin-left: -6.5em;
   }
 }
 @media screen and (max-width: 830px) {
@@ -618,17 +617,16 @@ body {
   }
 }
 /* Adaptation responsive petit écrans*/
-
 @media screen and (max-width: 390px) {
   .hostingMostPopular {
     width: 342px;
     border-radius: 0;
-    padding-bottom: 2em;
     margin-top: 1.5em;
+    padding-bottom: 2em;
   }
   .hostingCardMostPopular {
-    margin: 0.6em 0.2em 0.2em 0.2em;
     width: 21em;
+    margin: 0.6em 0.2em 0.2em 0.2em;
   }
   .HostingMostPopularTitle {
     margin: 1em 0 0.8em 1.4em;
@@ -638,16 +636,16 @@ body {
     margin-right: -1.4em
   }
   .headerMostPopular {
-    width:100%;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    width:100%;
    }
 }
 /*activités*/
 .sectionActivity{
-  font-size: 15px;
-  max-width: 1440px;
   width: 100%;
+  max-width: 1440px;
+  font-size: 15px;
 }
 .Activity {
   display: flex;
@@ -662,65 +660,65 @@ body {
 }
 /*Les cartes activités à Marseille*/
 .ActivityCard {
-  text-decoration: none; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 440px;
   width: 300px;
+  height: 440px;
   margin-bottom: 1em;
+  text-decoration: none; 
 }
 .ActivityCardFigure:hover {
   transform: scale(1.01);
 }
 .ActivityCardFigure {
-  box-shadow: 10px 10px 10px -10px #0000002e;
   border-radius: 1em 1em 1em 1em;
-  transition-duration: 0.1s;
-  background-color:#FFFFFF;
+  box-shadow: 10px 10px 10px -10px #0000002e;
   margin: 0 0 2.5em 0;
+  background-color:#FFFFFF;
+  transition-duration: 0.1s;
 }
 .ActivityCardFigureImg1 {
   border-radius: 1em 1em 0 0;
-  height: 345px;
   width: 300px;
+  height: 345px;
   object-fit: cover;
 }
 .ActivityCardFigureImg2 {
   border-radius: 1em 1em 0 0;
-  height: 170px;
   width: 300px;
+  height: 170px;
   object-fit: cover;
 }
 .ActivityCardFigureImg3 {
   border-radius: 1em 1em 0 0;
-  height: 80px;
   width: 300px;
+  height: 80px;
   object-fit: cover;
 }
 .ActivityCardFigureImg4{
   border-radius: 1em 1em 0 0;
-  height: 345px;
   width: 300px;
+  height: 345px;
   object-fit: cover;
 }
 .ActivityCardFigureImg5 {
   border-radius: 1em 1em 0 0;
-  height: 130px;
   width: 300px;
+  height: 130px;
   object-fit: cover;
 }
 .ActivityCardFigureImg6 {
   border-radius: 1em 1em 0 0;
-  height: 120px;
   width: 300px;
+  height: 120px;
   object-fit: cover;
 }
 .ActivityCardFigureFigcaption h3 {
   margin: 1em 0 0 1em;
-  color: black;
   font-size: 1em;
   font-weight: 800;
+  color: black;
 }
 /*Adaptation responsive tablette*/
 @media screen and (max-width: 1245px) {
@@ -730,8 +728,8 @@ body {
     max-height: 1300px;
   }
   .ActivityTitle {
-    margin-left: 22em;
     margin-top: 1em;
+    margin-left: 22em;
   }
   .ActivityCard {
     margin-left: 8em;
@@ -774,8 +772,8 @@ body {
   .ActivityCard {
     display: flex;
     flex-direction: column;
-    height:100%;
     width: 23.7em;
+    height:100%;
     margin-bottom: 0;
   }
   .ActivityCardFigure {
@@ -783,40 +781,40 @@ body {
     margin: 0.6em;
   }
   .ActivityCardFigureImg1 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg2 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg3 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg4 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg5 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg6 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
 }
 @media screen and (max-width: 450px)  {
   .ActivityTitle {
-    margin-left: 0.6em;
     margin-top: 1em;
+    margin-left: 0.6em;
   }
   .ActivityCard {
     display: flex;
     flex-direction: column;
-    height:100%;
     width: 23.7em;
+    height:100%;
     margin-bottom: 0;
   }
   .ActivityCardFigure {
@@ -824,41 +822,41 @@ body {
     margin: 0.6em;
   }
   .ActivityCardFigureImg1 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg2 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg3 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg4 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg5 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg6 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
 }
 /* Adaptation responsive petit écrans*/
 @media screen and (max-width: 390px) {
   .ActivityTitle {
-    margin-left: -5.7em;
     margin-top: 1em;
+    margin-left: -5.3em;
   }
   .ActivityCard {
     display: flex;
     flex-direction: column;
-    height:100%;
     width: 23.6em;
+    height:100%;
     margin-bottom: 0;
     margin-left: -0.2em;
   }
@@ -867,43 +865,43 @@ body {
     margin-bottom: 1em;
   }
   .ActivityCardFigureImg1 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg2 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg3 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg4 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg5 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
   .ActivityCardFigureImg6 {
-    height: 125px;
     width: 100%;
+    height: 125px;
   }
 }
 /*footer*/
 .footerFooter {
-  max-width: 1450px;
-  background-color: #F2F2F2;
   display: flex;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  background-color: #F2F2F2;
 }
 .footerColumn {
   display: flex;
   flex-direction: column;
-  margin: 50px 0 0 50px;
   width: 100%;
+  margin: 50px 0 0 50px;
 }
 .footerColumnTitle {
   margin-top: -1em;
@@ -912,9 +910,9 @@ body {
   font-weight: 800;
 }
 .footerColumnlink {
-  color: black;
   text-decoration: none;
   font-size: 0.8em;
+  color: black;
   cursor:pointer;
 }
 .footerList {
