@@ -633,7 +633,7 @@ body {
   }
   .iconMostPopular {
     float: right;
-    margin-right: -1.4em
+    margin-right: -1.4em;
   }
   .headerMostPopular {
     display: flex;
