@@ -1,15 +1,4 @@
-@font-face { /* Police Raleway */
-  font-family: 'Raleway';
-  src: url('fonts/Raleway-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  src: url('fonts/Raleway-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  src: url('fonts/Raleway-Medium.ttf') format('truetype');
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 #bloc_page
 {
@@ -18,7 +7,8 @@
 }
 
 body {
-  font-family: 'Raleway', Arial, serif; 
+  font-family: "raleway", sans-serif;
+  margin:0 auto;
 }
 /* header */
 .header {
@@ -30,14 +20,17 @@ body {
 /*Le logo*/
 .headerNavList {
   max-width: 400px;
-  width: 400px;
+  width: 100%;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  margin-right: 0.5em;
+  font-weight: 600;
 }
 /*Les liens de navigation*/
 .headerNavLink {
-  padding: 1em;
+  padding: 1em 1.5em 1em 1em;
   text-align: center;
   transition-duration: 0.1s;
   border-top: 3px  transparent;
@@ -51,19 +44,52 @@ body {
 .headerNavLink2 {
   color: #0065FC;
   text-decoration: none;
+  padding-left: 1.5em;
 }
 .headerNavLink:hover {
   color: #0065FC;
   border-top: 3px  solid;
 }
-/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 500px) {
   .header {
     display: flex;
     flex-direction: column;
   }
+  .headerNav {
+    display:flex;
+    justify-content: center;
+  }
   .headerNavList {
-    margin: 0 6.1em 0 -3em;
+    width: 100%;
+    padding-bottom: 1em;
+    margin-right: 0;
+    border-bottom: 3px solid #F2F2F2;
+  }
+  .headerNavLink { 
+    width:100%;
+    margin-bottom: -0.2em;
+  }
+  .headerNavLink[data-active=true] {
+    border-bottom-color: #0065FC;
+  }
+  .headerNavLink:hover {
+    border-top: none;
+    border-bottom: 3px solid;
+  }
+  .headerImg {
+    width: 100px;
+    margin-left: 1.2em;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 400px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .headerNavList {
+    margin: 0;
+    padding-bottom: 0;
     border-bottom: 3px solid #F2F2F2;
   }
   .headerNavLink { 
@@ -81,11 +107,11 @@ body {
   }
   .headerImg {
     width: 100px;
-    margin-left: 0.5em;
+    margin-left: 1.2em;
   }
   .headerNavLink2 {
     position: absolute;
-    top: 25px;
+    top: 22px;
     right: 1.3em;
     text-decoration: none;
   }
@@ -98,7 +124,7 @@ body {
 /*Barre de recherche*/
 .search h1 {
   font-size: 24px ;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: -0.2em;
 }
 .search p {
@@ -156,6 +182,7 @@ body {
 @media screen and (max-width: 500px) {
   .searchForm {
     width: 100%;
+    margin-top: 1em;
   }
   .searchFormSubmitinputText {
     display: none;
@@ -165,10 +192,19 @@ body {
   }
   .search {
     width: 100%;
-    margin-left: 0.5em;
+  }
+  .search h1 {
+    width: 350px;
+    margin-left: 0.8em;
+    font-weight: 700;
   }
   .search p {
     font-size: 16px;
+    margin-left: 1.2em;
+  }
+  .searchForm {
+    margin-left: 1.2em;
+    width: 350px;
   }
   .searchFormSubmitinput {
     border-radius: 1em 1em 1em 1em;
@@ -187,7 +223,7 @@ body {
 .searchFiltersTitle {
   margin: 3em 2em 0 0;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 800;
 }
 .searchFiltersFilter {
   display: flex;
@@ -198,7 +234,7 @@ body {
   border-radius: 2em;
   cursor:pointer;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 800;
   padding: 0 1em 0 0em;
   height: 3em;
 }
@@ -242,19 +278,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: -1em;
+    margin-left: 1.2em;
   }
   .searchFiltersFilter { 
     margin-right: 1em;
-    padding-right: 0.6em;
+    padding-right: 1em;
   }
   .searchFiltersTitle {
-    margin-bottom: -1.5em;
+    margin-bottom: -1em;
+  }
+  .searchResult {
+    margin-top: 0em;
   }
   .searchResultText {
-    margin-right: 0.1em;
+    margin: 1em 0 1em 0;
   }
   .searchResultIcon {
-    margin-top: -1.5em;
+    margin: -1.5em -0.3em 0 1.2em;
   }
 }
   /*hébergements*/
@@ -278,6 +318,7 @@ body {
 /*Le titre*/
 .hostingheaderTitle {
   margin-left: 1em;
+  font-weight: 800;
 }
 /*Les cartes*/
 .hostingCard {
@@ -292,6 +333,9 @@ body {
   width: 15em;
   text-decoration: none;
   margin-bottom: 2em;
+}
+.hostingRef {
+  margin-bottom: 1em;
 }
 .hostingCardFigure {
   margin: 0;
@@ -311,6 +355,7 @@ body {
   color: black;
   font-size: 0.8em;
   margin: 0.5em 0 0.5em 0.5em;
+  font-weight: 800;
 }
 .hostingCardDescript {
   color: black;
@@ -327,7 +372,7 @@ body {
 }
 .hostingViewmore {
   color: black;
-  font-weight: bold;
+  font-weight: 800;
   text-decoration: none;
   margin-left: 1.5em;
 }
@@ -367,33 +412,52 @@ body {
     height: 12em;
   }
 }
-/* Adaptation responsive petit écrans*/
 @media screen and (max-width: 500px) {
   .hostingAside {
     display:flex;
     flex-direction: column-reverse;
     width:100%;
-    margin: 0 auto;
+    margin-left: -1em;
   }
   .hosting {
-    background-color: #FFFFFF;
-    width:  100%;
-    margin-bottom: 1em;
-  }
-  .hostingheaderTitle {
-    margin: 1em 0 1em -1.7em;
+    width: 100%;
   }
   .hostingRef {
     display: flex;
     flex-direction: column;
-    
+  }
+  .hostingCard {
+    height: 12em;
+    width: 23em;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 400px) {
+  .hostingAside {
+    display:flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hosting {
+    background-color: #FFFFFF;
+    width: 341px;
+    margin-bottom: 1em;
+    margin-top: -2em;
+  }
+  .hostingheaderTitle {
+    margin: 0.8em 0 0.8em -1.6em;
+  }
+  .hostingRef {
+    display: flex;
+    flex-direction: column;
   }
   .hostingCard {
     width:  21em;
     margin-bottom: 1em;
   }
   .hostingViewmore {
-    margin-right: 14.1em;
+    margin-right: 15.1em;
     margin-left: 0;
   }
 }
@@ -421,7 +485,11 @@ body {
   width: 22em;
 }
 .HostingMostPopularTitle{
-  margin: 1em 0 0.7em 1em;
+  margin: 0.8em 0 0.9em 1em;
+  font-weight: 800;
+}
+.iconMostPopular {
+  margin-top: -1.8em;
 }
 .hostingCardMostPopularFigure:hover {
   transform: scale(1.02);
@@ -447,6 +515,7 @@ body {
   color: black;
   display: flex;
   font-size: 0.8em;
+  font-weight: 800;
   margin: 0.5em 0 0.5em 1em;
 }
 .hostingCardMostPopularDescript {
@@ -518,40 +587,58 @@ body {
 @media screen and (max-width: 830px) {
   .hostingMostPopular {
     display: flex;
-    flex-direction: column center;
+    flex-direction: column;
+    align-items: center;
   }
   .hostingCardMostPopular {
     width: 25em;
   }
   .headerMostPopular {
    width: 100%;
-   
+   margin-left: -4em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hostingMostPopular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hostingCardMostPopular {
+    width: 20em;
+  }
+  .headerMostPopular {
+   width: 100%;
   }
   .HostingMostPopularTitle {
-    margin-left: 4.5em;
+    margin-left: -0.8em;
+  }
+  .iconMostPopular {
+    margin-right: -6em;
   }
 }
 /* Adaptation responsive petit écrans*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 390px) {
   .hostingMostPopular {
-    width: 100%;
+    width: 342px;
     border-radius: 0;
-    margin-bottom: 0;
+    padding-bottom: 2em;
+    margin-top: 1.5em;
   }
-  .hostingCardMostPopular{
-    margin: 0.6em;
+  .hostingCardMostPopular {
+    margin: 0.6em 0.2em 0.2em 0.2em;
     width: 21em;
   }
   .HostingMostPopularTitle {
-    margin: 1em 0 0.5em 2.6em;
+    margin: 1em 0 0.8em 1.4em;
   }
   .iconMostPopular {
     float: right;
-    margin-right: -2em
+    margin-right: -1.4em
   }
   .headerMostPopular {
-    width: 100%;
+    width:100%;
     display: flex;
     justify-content: space-between
    }
@@ -571,6 +658,7 @@ body {
 .ActivityTitle{
   margin-top: 2em;
   margin-bottom: 0.8em;
+  font-weight: 800;
 }
 /*Les cartes activités à Marseille*/
 .ActivityCard {
@@ -632,7 +720,7 @@ body {
   margin: 1em 0 0 1em;
   color: black;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 800;
 }
 /*Adaptation responsive tablette*/
 @media screen and (max-width: 1245px) {
@@ -651,16 +739,22 @@ body {
 }
 @media screen and (max-width: 1100px) {
   .ActivityTitle {
-    margin-left: 19em;
-    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    margin:1em 0 1em 0;
   }
   .ActivityCard {
     margin-left: 5em;
   }
+  .headerActivity {
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+  }
 }
 @media screen and (max-width: 870px) {
   .ActivityTitle {
-    margin-left: 15em;
     margin-top: 1em;
   }
   .ActivityCard {
@@ -668,18 +762,14 @@ body {
   }
 }
 @media screen and (max-width: 670px) {
-  .ActivityTitle {
-    margin-left: 9em;
-    margin-top: 1em;
-  }
   .ActivityCard {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 610px) {
-  .ActivityTitle {
-    margin-left: 7em;
-    margin-top: 1em;
+  .Activity {
+    display: flex;
+    align-items:  center;
   }
   .ActivityCard {
     display: flex;
@@ -687,7 +777,6 @@ body {
     height:100%;
     width: 23.7em;
     margin-bottom: 0;
-    margin-left: 7em;
   }
   .ActivityCardFigure {
     height: 180px;
@@ -729,7 +818,6 @@ body {
     height:100%;
     width: 23.7em;
     margin-bottom: 0;
-    
   }
   .ActivityCardFigure {
     height: 180px;
@@ -763,7 +851,7 @@ body {
 /* Adaptation responsive petit écrans*/
 @media screen and (max-width: 390px) {
   .ActivityTitle {
-    margin-left: 0.6em;
+    margin-left: -5.7em;
     margin-top: 1em;
   }
   .ActivityCard {
@@ -772,11 +860,11 @@ body {
     height:100%;
     width: 23.6em;
     margin-bottom: 0;
-    margin-left: 0.2em;
+    margin-left: -0.2em;
   }
   .ActivityCardFigure {
     height: 180px;
-    margin: 0.6em;
+    margin-bottom: 1em;
   }
   .ActivityCardFigureImg1 {
     height: 125px;
@@ -821,7 +909,7 @@ body {
   margin-top: -1em;
   margin-bottom: 0em;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 800;
 }
 .footerColumnlink {
   color: black;
@@ -836,19 +924,34 @@ body {
 .footerListList {
   padding-bottom: 0.6em;
 }
-/* Adaptation responsive petit écrans*/
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 520px) {
   .footerFooter {
     display: flex;
     flex-direction: column;
-    width: 375px;
+    width: 100%;
     margin-top: 2em;
-    margin-left: -0.5em;
+    margin-left: 0;
     padding-top: 2em;
-    
+    overflow: hidden;
   }
   .footerColumn {
     height: 100%;
-    margin: 1.8em 0 0 1.25em;
+    margin: 1.8em 0 0 2.25em;
+  }
+}
+/* Adaptation responsive petit écrans*/
+@media screen and (max-width: 390px) {
+  .footerFooter {
+    display: flex;
+    flex-direction: column;
+    width: 373px;
+    margin-top: 2em;
+    margin-left: 0;
+    padding-top: 2em;
+    overflow: hidden;
+  }
+  .footerColumn {
+    height: 100%;
+    margin: 1.8em 0 0 2.25em;
   }
 }
