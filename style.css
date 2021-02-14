@@ -32,7 +32,7 @@ body {
 .headerNavLink {
   border-top: 3px  transparent;
   border-bottom: 3px  transparent;
-  padding: 1em 1.5em 1em 1em;
+  padding: 0.9em 1.5em 1em 1em;
   text-decoration: none;  
   text-align: center;
   color: black;
@@ -48,7 +48,7 @@ body {
 }
 .headerNavLink:hover {
   color: #0065FC;
-  border-top: 3px  solid;
+  border-top: 3px solid #0065FC;
 }
 @media screen and (max-width: 1400px)  {
   .header {
