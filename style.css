@@ -50,6 +50,7 @@ body {
   color: #0065FC;
   border-top: 3px solid #0065FC;
 }
+/* Adaptation responsive Tablette*/
 @media screen and (max-width: 1400px)  {
   .header {
     margin-right: 1.5em;
