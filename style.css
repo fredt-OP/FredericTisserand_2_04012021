@@ -8,7 +8,7 @@
 
 body {
   font-family: "raleway", sans-serif;
-  margin:0 auto;
+  margin:0 ;
 }
 /* header */
 .header {
@@ -399,7 +399,7 @@ body {
     background-color: #FFFFFF;
   }
   .hostingTitle {
-    margin: 0.8em 0 0.8em -1.5em;
+    margin: 0.8em 0 0.8em -1.3em;
   }
   .hostingRef {
     display: flex;
@@ -414,7 +414,7 @@ body {
     position: absolute;
     position:bottom;
     bottom: -20px;
-    left: -7px;
+    left: -4px;
   }
 }
 /*Les plus populaires*/
@@ -520,7 +520,7 @@ body {
     width: 21em;
   }
   .hostingMostPopularTitle {
-    margin: 1em 0 0.8em 0;
+    margin: 1em 0 0.8em 0.1em;
   }
   .iconMostPopular {
     margin-right: 0.2em;
@@ -661,7 +661,7 @@ body {
   }
   .ActivityTitle {
     margin-top: 1em;
-    margin-left: -5.3em;
+    margin-left: -5.2em;
   }
   .ActivityCard {
     display: flex;
