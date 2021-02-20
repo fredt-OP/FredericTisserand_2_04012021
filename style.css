@@ -67,16 +67,20 @@ body {
   }
   .headerNavList {
     display: inline block;
-    min-width: 100%;
+    max-width: 100%;
     padding-bottom: 0;
     border-bottom: 3px solid #F2F2F2; 
+  }
+  .headerNavList li {
+    min-width: 50%;
+    position: relative;
   }
   .headerNavLink { 
     display:flex;
     justify-content: center;
-    position: relative;
+    
     margin-bottom: -0.2em;
-    min-width: 147.5px;
+    
   }
   .headerNavLink[data-active=true] {
     border-bottom-color: #0065FC;
@@ -88,13 +92,35 @@ body {
   .headerImg {
     width: 100px;
     margin-left: 1.2em;
+    margin-top: 1em;
   }
   .headerNavLink2 {
-    position: absolute;
-    top: 35px;
-    right: 1.3em;
+    display:flex;
+    justify-content: flex-end;
     text-decoration: none;
   } 
+  .li3 {
+    max-width: 90px;
+    position: absolute;
+    top: -43px;
+    right: 12.9em;
+  }
+}
+/*iphone5*/
+@media screen and (max-width: 350px) {
+  body {
+    max-width: 320px;
+  }
+  .searchInput {
+    max-width: 180px;
+  }
+  .li3 {
+    max-width: 90px;
+    position: absolute;
+    top: -43px;
+    right: 11.2em;
+  }
+  
 }
 /*main*/
 .main {
@@ -379,6 +405,7 @@ body {
   .hostingCard {
     height: 12em;
     margin-right: 1em;
+   
   }
   .hostingTitle {
     margin-left: 0;
@@ -386,7 +413,7 @@ body {
 }
 @media screen and (max-width: 565px) {
   .hostingCard {
-    width: 23em;
+    width: 95%;
   }
 }
 /* Adaptation responsive petit écrans*/
@@ -399,16 +426,16 @@ body {
     background-color: #FFFFFF;
   }
   .hostingTitle {
-    margin: 0.8em 0 0.8em -1.3em;
+    margin: 0.8em 0em 0.8em -1.4em;
   }
   .hostingRef {
     display: flex;
     flex-direction: column;
   }
   .hostingCard {
-    width:  21em;
-    margin-bottom: 0.8em;
-    margin-right: 0.1em;
+    width: 90%;
+    margin: 0 0 0.8em 1.2em;
+    
   }
   .hostingViewmore {
     position: absolute;
@@ -416,6 +443,11 @@ body {
     bottom: -20px;
     left: -4px;
   }
+  @media screen and (max-width: 350px) {
+    .hostingTitle {
+      margin: 0.8em 0em 0.8em 0em;
+      font-size: 1.4em;
+    }
 }
 /*Les plus populaires*/
 .hostingMostPopular {
@@ -504,6 +536,12 @@ body {
     width: 28em;
     margin: 1em;
   }
+  .hostingCardMostPopularFigureImg {
+    width: 33%;
+  }
+  .hostingCardMostPopularFigureFigcaption {
+    width: 40%;
+  }
 }
 /* Adaptation responsive petit écrans*/
 @media screen and (max-width: 500px) {
@@ -514,22 +552,32 @@ body {
     align-items: center;
   }
   .cardMostPopular {
-    margin: 0 0.1em 0.7em 0em;
+    margin: 0 0.1em 0.7em 0.2em;
   }
   .hostingCardMostPopular {
-    width: 21em;
+    width: 100%;
   }
   .hostingMostPopularTitle {
-    margin: 1em 0 0.8em 0.1em;
+    margin: 1em 0 0.8em 0;
   }
   .iconMostPopular {
-    margin-right: 0.2em;
+    margin-right: 0em;
   }
   .headerMostPopular {
     width:100%;
   }
    .hostingCardMostPopularFigureFigcaption {
      padding-right: 1em;
+     width: 9em;
+  }
+  @media screen and (max-width: 350px) {
+    .hostingCardMostPopularFigureFigcaption {
+      padding-right: 0;
+      width: 8em;
+   }
+   .hostingCardMostPopularFigureImg {
+    max-width: 20%;
+    }
   }
 }
 /*activités*/
@@ -636,7 +684,7 @@ body {
   .ActivityCard {
     display: flex;
     flex-direction: column;
-    width: 33.7em;
+    width: 50%;
     height:100%;
     margin-bottom: 0;
   }
@@ -655,7 +703,7 @@ body {
   }
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 565px) {
   .sectionActivity {
     margin-top: 4em;
   }
@@ -666,7 +714,7 @@ body {
   .ActivityCard {
     display: flex;
     flex-direction: column;
-    width: 23.6em;
+    width: 95%;
     height:100%;
     margin-bottom: 0;
     margin-left: 0.1em;
@@ -683,6 +731,12 @@ body {
   .ActivityCardFigureImg6 {
     width: 100%;
     height: 125px;
+  }
+  @media screen and (max-width: 350px)  {
+    .ActivityTitle {
+      font-size: 1.4em;
+      margin: 0.8em 0em 0.8em 0em;
+    }
   }
 }
 
