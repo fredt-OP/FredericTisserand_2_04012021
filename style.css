@@ -58,7 +58,7 @@ body {
   }
 }
 /* Adaptation responsive petit écrans*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -78,9 +78,7 @@ body {
   .headerNavLink { 
     display:flex;
     justify-content: center;
-    
     margin-bottom: -0.2em;
-    
   }
   .headerNavLink[data-active=true] {
     border-bottom-color: #0065FC;
@@ -95,15 +93,36 @@ body {
     margin-top: 1em;
   }
   .headerNavLink2 {
-    display:flex;
-    justify-content: flex-end;
+    padding-left:0;
     text-decoration: none;
   } 
   .li3 {
-    max-width: 90px;
+    display:flex;
+    justify-content: flex-end;
+    max-width: 50px;
     position: absolute;
     top: -43px;
-    right: 12.9em;
+    right: 17em;
+  }
+}
+@media screen and (max-width: 460px) {
+  .li3 {
+    display:flex;
+    justify-content: flex-end;
+    max-width: 50px;
+    position: absolute;
+    top: -43px;
+    right: 14em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .li3 {
+    display:flex;
+    justify-content: flex-end;
+    max-width: 50px;
+    position: absolute;
+    top: -43px;
+    right: 13em;
   }
 }
 /*iphone5*/
@@ -120,7 +139,6 @@ body {
     top: -43px;
     right: 11.2em;
   }
-  
 }
 /*main*/
 .main {
@@ -443,11 +461,12 @@ body {
     bottom: -20px;
     left: -4px;
   }
-  @media screen and (max-width: 350px) {
-    .hostingTitle {
-      margin: 0.8em 0em 0.8em 0em;
-      font-size: 1.4em;
-    }
+}
+@media screen and (max-width: 350px) {
+  .hostingTitle {
+    margin: 0.8em 0em 0.8em 0em;
+    font-size: 1.4em;
+  }
 }
 /*Les plus populaires*/
 .hostingMostPopular {
@@ -570,16 +589,17 @@ body {
      padding-right: 1em;
      width: 9em;
   }
-  @media screen and (max-width: 350px) {
-    .hostingCardMostPopularFigureFigcaption {
-      padding-right: 0;
-      width: 8em;
-   }
-   .hostingCardMostPopularFigureImg {
+}
+@media screen and (max-width: 350px) {
+  .hostingCardMostPopularFigureFigcaption {
+    padding-right: 0;
+    width: 8em;
+  }
+  .hostingCardMostPopularFigureImg {
     max-width: 20%;
-    }
   }
 }
+
 /*activités*/
 .sectionActivity{
   max-width: 1440px;
@@ -732,13 +752,14 @@ body {
     width: 100%;
     height: 125px;
   }
-  @media screen and (max-width: 350px)  {
-    .ActivityTitle {
-      font-size: 1.4em;
-      margin: 0.8em 0em 0.8em 0em;
-    }
+}
+@media screen and (max-width: 350px) {
+  .ActivityTitle {
+    font-size: 1.4em;
+    margin: 0.8em 0em 0.8em 0em;
   }
 }
+
 
 /*footer*/
 .footerFooter {
